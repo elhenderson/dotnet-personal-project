@@ -1,0 +1,14 @@
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.csprojAssemblyReference.cache
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.csproj.CoreCompileInputs.cache
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.RazorAssemblyInfo.cache
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.RazorAssemblyInfo.cs
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.AssemblyInfoInputs.cache
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.AssemblyInfo.cs
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/bin/Debug/netcoreapp2.2/DatingApp.API.deps.json
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/bin/Debug/netcoreapp2.2/DatingApp.API.runtimeconfig.json
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/bin/Debug/netcoreapp2.2/DatingApp.API.runtimeconfig.dev.json
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/bin/Debug/netcoreapp2.2/DatingApp.API.dll
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/bin/Debug/netcoreapp2.2/DatingApp.API.pdb
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.RazorTargetAssemblyInfo.cache
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.dll
+/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/Debug/netcoreapp2.2/DatingApp.API.pdb
