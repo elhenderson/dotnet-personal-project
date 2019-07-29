@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/evann/Documents/GitHub/dotnet personal project/Game.API/DatingApp.API.csproj",
+  "FilePath": "/Users/evann/Documents/GitHub2/dotnet personal project/Game.API/Game.API.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2940,7 +2940,7 @@
     ],
     "CSharpLanguageVersion": 703
   },
-  "RootNamespace": "DatingApp.API",
+  "RootNamespace": "Game.API",
   "Documents": [],
   "SerializationFormat": "0.1"
 }

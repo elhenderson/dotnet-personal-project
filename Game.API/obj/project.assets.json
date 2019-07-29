@@ -12405,6 +12405,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Microsoft.AspNetCore >= 2.2.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 2.2.6",
@@ -12418,11 +12419,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/evann/Documents/GitHub/dotnet personal project/Game.API/Game.API.csproj",
+      "projectUniqueName": "/Users/evann/Documents/GitHub2/dotnet personal project/Game.API/Game.API.csproj",
       "projectName": "Game.API",
-      "projectPath": "/Users/evann/Documents/GitHub/dotnet personal project/Game.API/Game.API.csproj",
+      "projectPath": "/Users/evann/Documents/GitHub2/dotnet personal project/Game.API/Game.API.csproj",
       "packagesPath": "/Users/evann/.nuget/packages/",
-      "outputPath": "/Users/evann/Documents/GitHub/dotnet personal project/Game.API/obj/",
+      "outputPath": "/Users/evann/Documents/GitHub2/dotnet personal project/Game.API/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -12450,6 +12451,10 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "Microsoft.AspNetCore": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
