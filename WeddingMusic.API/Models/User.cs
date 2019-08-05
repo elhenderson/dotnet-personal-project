@@ -7,6 +7,6 @@ namespace Game.API.Models
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
 
-        public string weddingDate { get; set; }
+        public string WeddingDate { get; set; }
     }
 }

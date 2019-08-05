@@ -22,7 +22,6 @@ export class RegisterComponent implements OnInit {
     }, error => {
       console.log(error);
     });
-    console.log(this.model);
   }
 
   cancel() {

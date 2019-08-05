@@ -23,6 +23,7 @@ constructor(private http: HttpClient) { }
   }
 
   register(model: any) {
+    model.weddingDate = model.weddingDate.toString().slice(0, -42);
     return this.http.post(this.baseUrl + 'register', model);
   }
 

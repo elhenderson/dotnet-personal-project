@@ -12,6 +12,6 @@ namespace Game.API.Dtos
         public string Password { get; set; }
 
         [Required]
-        public object WeddingDate { get; set; }
+        public string WeddingDate { get; set; }
     }
 }
