@@ -4,6 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule, MatNativeDateModule} from '@angular/material';
+import {BsDropdownModule} from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -26,7 +27,8 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
       FormsModule,
       BrowserAnimationsModule,
       MatDatepickerModule,
-      MatNativeDateModule
+      MatNativeDateModule,
+      BsDropdownModule.forRoot()
    ],
    providers: [
       AuthService,
