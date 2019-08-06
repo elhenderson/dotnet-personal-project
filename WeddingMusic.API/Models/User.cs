@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace Game.API.Models
 {
     public class User
@@ -8,5 +12,15 @@ namespace Game.API.Models
         public byte[] PasswordSalt { get; set; }
 
         public string WeddingDate { get; set; }
+
+        public string Venue { get; set; }
+
+        public string Street { get; set; }
+
+        public string City { get; set; }
+
+        public string SavedSongs { get; set; }
+
+        public ICollection<Lineup> Lineup { get; set; }
     }
 }

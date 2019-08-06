@@ -21,7 +21,7 @@
     "@angular/material": "^6.0.2",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
-    "@angular/router": "^6.0.3",
+    "@angular/router": "^6.0.9",
     "@auth0/angular-jwt": "^3.0.0",
     "alertifyjs": "^1.11.4",
     "bootstrap": "^4.3.1",

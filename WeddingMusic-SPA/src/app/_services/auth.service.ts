@@ -27,9 +27,7 @@ constructor(private http: HttpClient) { }
   }
 
   register(model: any) {
-    if (model.weddingDate) {
-      model.weddingDate = model.weddingDate.toString().slice(0, -42);
-    } else {
+    if (!model.weddingDate) {
       model.weddingDate = null;
     }
     return this.http.post(this.baseUrl + 'register', model);
