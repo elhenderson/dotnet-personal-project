@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Game.API.Models;
 using Newtonsoft.Json;
+using WeddingMusic.API.Models;
 
 namespace Game.API.Data
 {

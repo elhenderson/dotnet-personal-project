@@ -13,11 +13,13 @@ import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
-import { BrowseMusicComponent } from './browse-music/browse-music.component';
+import { SongComponent } from './song/song.component';
 import { SavedSongsComponent } from './saved-songs/saved-songs.component';
 import { LineupComponent } from './lineup/lineup.component';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
+import { UserService } from './_services/user.service';
+import { SongService } from './_services/song.service';
 
 @NgModule({
    declarations: [
@@ -26,7 +28,7 @@ import { AuthGuard } from './_guards/auth.guard';
       HomeComponent,
       RegisterComponent,
       RegisterComponent,
-      BrowseMusicComponent,
+      SongComponent,
       SavedSongsComponent,
       LineupComponent
    ],
@@ -44,7 +46,9 @@ import { AuthGuard } from './_guards/auth.guard';
       AuthService,
       MatDatepickerModule,
       ErrorInterceptorProvider,
-      AuthGuard
+      AuthGuard,
+      UserService,
+      SongService
    ],
    bootstrap: [
       AppComponent

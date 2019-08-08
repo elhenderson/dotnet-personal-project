@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
-using Game.API.Models;
 using Microsoft.EntityFrameworkCore;
+using WeddingMusic.API.Models;
 
 namespace Game.API.Data
 {

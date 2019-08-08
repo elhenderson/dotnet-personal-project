@@ -1,5 +1,6 @@
 using Game.API.Models;
 using Microsoft.EntityFrameworkCore;
+using WeddingMusic.API.Models;
 
 namespace Game.API.Data
 {
@@ -11,5 +12,7 @@ namespace Game.API.Data
         public DbSet<User> Users { get; set; }
 
         public DbSet<Lineup> Lineup { get; set; }
+
+        public DbSet<Song> Songs { get; set; }
     }
 }

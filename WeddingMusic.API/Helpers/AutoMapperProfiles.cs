@@ -1,6 +1,6 @@
 using AutoMapper;
-using Game.API.Models;
 using WeddingMusic.API.Dtos;
+using WeddingMusic.API.Models;
 
 namespace WeddingMusic.API.Helpers
 {

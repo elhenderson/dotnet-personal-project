@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Game.API.Models;
+using WeddingMusic.API.Models;
 
 namespace WeddingMusic.API.Data
 {
@@ -15,5 +16,7 @@ namespace WeddingMusic.API.Data
          Task<IEnumerable<User>> GetUsers();
 
          Task<User> GetUser(int id);
+
+         Task<IEnumerable<Song>> GetSongs();
     }
 }

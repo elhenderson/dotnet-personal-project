@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Game.API.Data;
 using Game.API.Models;
 using Microsoft.EntityFrameworkCore;
+using WeddingMusic.API.Models;
 
 namespace WeddingMusic.API.Data
 {
@@ -38,9 +39,17 @@ namespace WeddingMusic.API.Data
       return users;
     }
 
+    public async Task<IEnumerable<Song>> GetSongs()
+    {
+        var songs = await _context.Songs.ToListAsync();
+
+        return songs;
+    }
+
     public async Task<bool> SaveAll()
     {
       return await _context.SaveChangesAsync() > 0;
     }
+
   }
 }

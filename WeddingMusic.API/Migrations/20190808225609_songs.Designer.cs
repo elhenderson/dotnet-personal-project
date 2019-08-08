@@ -3,14 +3,16 @@ using System;
 using Game.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Game.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20190808225609_songs")]
+    partial class songs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -80,24 +82,6 @@ namespace Game.API.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Values");
-                });
-
-            modelBuilder.Entity("WeddingMusic.API.Models.Song", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Artist");
-
-                    b.Property<string>("Sample");
-
-                    b.Property<bool>("Saved");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Songs");
                 });
 
             modelBuilder.Entity("Game.API.Models.Lineup", b =>

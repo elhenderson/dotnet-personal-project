@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using Game.API.Models;
+using WeddingMusic.API.Models;
 
 namespace Game.API.Data
 {

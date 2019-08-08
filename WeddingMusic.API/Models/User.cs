@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Game.API.Models
+namespace WeddingMusic.API.Models
 {
     public class User
     {

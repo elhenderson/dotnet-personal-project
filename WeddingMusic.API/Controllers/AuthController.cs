@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Game.API.Data;
 using Game.API.Dtos;
-using Game.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using WeddingMusic.API.Models;
 
 namespace Game.API.Controllers
 {
