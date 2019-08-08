@@ -22,5 +22,6 @@ namespace Game.API.Models
         public string SavedSongs { get; set; }
 
         public ICollection<Lineup> Lineup { get; set; }
-    }
+
+  }
 }
