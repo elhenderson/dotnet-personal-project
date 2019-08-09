@@ -1,0 +1,7 @@
+<div class="container mt-5">
+  <div class="row">
+    <div *ngFor="let song of songs" class="col-lg-2 col-md-3 col-sm-6">
+      <app-song-card [song]="song"></app-song-card>
+    </div>
+  </div>
+</div>

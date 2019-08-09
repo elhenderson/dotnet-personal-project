@@ -13,13 +13,20 @@ import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
-import { SongComponent } from './song/song.component';
+import { SongComponent } from './songs/song/song.component';
 import { SavedSongsComponent } from './saved-songs/saved-songs.component';
 import { LineupComponent } from './lineup/lineup.component';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
 import { SongService } from './_services/song.service';
+import { SongCardComponent } from './songs/song-card/song-card.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { AddSongComponent } from './songs/addSong/addSong.component';
+
+export function tokenGetter() {
+   return localStorage.getItem('token');
+}
 
 @NgModule({
    declarations: [
@@ -29,6 +36,7 @@ import { SongService } from './_services/song.service';
       RegisterComponent,
       RegisterComponent,
       SongComponent,
+      SongCardComponent,
       SavedSongsComponent,
       LineupComponent
    ],
@@ -40,7 +48,14 @@ import { SongService } from './_services/song.service';
       MatDatepickerModule,
       MatNativeDateModule,
       BsDropdownModule.forRoot(),
-      RouterModule.forRoot(appRoutes)
+      RouterModule.forRoot(appRoutes),
+      JwtModule.forRoot({
+         config: {
+            tokenGetter,
+            whitelistedDomains: ['localhost:5001'],
+            blacklistedRoutes: ['localhost:5001/api/auth']
+         }
+      })
    ],
    providers: [
       AuthService,

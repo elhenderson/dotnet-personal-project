@@ -4,4 +4,5 @@ export interface Song {
   artist?: string;
   sample?: string;
   saved?: boolean;
+  image?: string;
 }

@@ -8,5 +8,6 @@ namespace WeddingMusic.API.Models
         public string Sample { get; set; }
         public bool Saved { get; set; }
 
+        public string Image { get; set; }
     }
 }
