@@ -4,6 +4,7 @@ import { LineupComponent } from './lineup/lineup.component';
 import { SongComponent } from './songs/song/song.component';
 import { SavedSongsComponent } from './saved-songs/saved-songs.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { LineupEditResolver } from './_resolvers/lineupEdit.resolver';
 
 export const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +14,7 @@ export const appRoutes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {path: 'lineup', component: LineupComponent},
-      {path: 'lineup/:id', component: LineupComponent},
+      {path: 'lineup/edit', component: LineupEditComponent, resolve: {lineup: LineupEditResolver}},
       {path: 'songs', component: SongComponent},
       {path: 'saved-songs', component: SavedSongsComponent}
     ]

@@ -22,7 +22,7 @@ import { UserService } from './_services/user.service';
 import { SongService } from './_services/song.service';
 import { SongCardComponent } from './songs/song-card/song-card.component';
 import { JwtModule } from '@auth0/angular-jwt';
-import { AddSongComponent } from './songs/addSong/addSong.component';
+import { LineupEditResolver } from './_resolvers/lineupEdit.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -63,7 +63,8 @@ export function tokenGetter() {
       ErrorInterceptorProvider,
       AuthGuard,
       UserService,
-      SongService
+      SongService,
+      LineupEditResolver
    ],
    bootstrap: [
       AppComponent
