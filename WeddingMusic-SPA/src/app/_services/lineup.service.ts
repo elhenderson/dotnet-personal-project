@@ -12,8 +12,8 @@ export class LineupService {
 
   constructor(private http: HttpClient) { }
 
-  getLineup(id): Observable<Lineup[]> {
-    return this.http.get<Lineup[]>(this.baseUrl + 'lineup/' + id);
+  getLineup(id): Observable<Lineup> {
+    return this.http.get<Lineup>(this.baseUrl + 'lineup/' + id);
   }
 
 }

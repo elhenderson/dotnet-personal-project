@@ -4,7 +4,8 @@ import { LineupComponent } from './lineup/lineup.component';
 import { SongComponent } from './songs/song/song.component';
 import { SavedSongsComponent } from './saved-songs/saved-songs.component';
 import { AuthGuard } from './_guards/auth.guard';
-import { LineupEditResolver } from './_resolvers/lineupEdit.resolver';
+import { LineupResolver } from './_resolvers/lineup.resolver';
+import { LineupEditComponent } from './lineup/lineupEdit/lineupEdit.component';
 
 export const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,8 +14,8 @@ export const appRoutes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
     children: [
-      {path: 'lineup', component: LineupComponent},
-      {path: 'lineup/edit', component: LineupEditComponent, resolve: {lineup: LineupEditResolver}},
+      {path: 'lineup/:id', component: LineupComponent, resolve: {LineupResolver}},
+      {path: 'lineup/edit', component: LineupEditComponent, resolve: {lineup: LineupResolver}},
       {path: 'songs', component: SongComponent},
       {path: 'saved-songs', component: SavedSongsComponent}
     ]

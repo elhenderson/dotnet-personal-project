@@ -22,7 +22,9 @@ import { UserService } from './_services/user.service';
 import { SongService } from './_services/song.service';
 import { SongCardComponent } from './songs/song-card/song-card.component';
 import { JwtModule } from '@auth0/angular-jwt';
-import { LineupEditResolver } from './_resolvers/lineupEdit.resolver';
+import { LineupEditComponent } from './lineup/lineupEdit/lineupEdit.component';
+import { LineupService } from './_services/lineup.service';
+import { LineupResolver } from './_resolvers/lineup.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -38,7 +40,8 @@ export function tokenGetter() {
       SongComponent,
       SongCardComponent,
       SavedSongsComponent,
-      LineupComponent
+      LineupComponent,
+      LineupEditComponent
    ],
    imports: [
       BrowserModule,
@@ -64,7 +67,8 @@ export function tokenGetter() {
       AuthGuard,
       UserService,
       SongService,
-      LineupEditResolver
+      LineupService,
+      LineupResolver
    ],
    bootstrap: [
       AppComponent

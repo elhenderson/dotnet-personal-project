@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 import { AuthService } from '../_services/auth.service';
 
 @Injectable()
-export class LineupEditResolver implements Resolve<Lineup> {
+export class LineupResolver implements Resolve<Lineup> {
   constructor(private lineupService: LineupService, private router: Router,
     private alertify: AlertifyService, private authService: AuthService) {}
 
