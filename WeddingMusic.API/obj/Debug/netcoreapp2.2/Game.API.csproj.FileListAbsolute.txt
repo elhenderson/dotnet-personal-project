@@ -54,3 +54,17 @@ E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.
 E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.RazorTargetAssemblyInfo.cache
 E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.dll
 E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.pdb
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.deps.json
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.runtimeconfig.json
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.runtimeconfig.dev.json
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.dll
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.pdb
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.csprojAssemblyReference.cache
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.csproj.CoreCompileInputs.cache
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.RazorAssemblyInfo.cache
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.RazorAssemblyInfo.cs
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.AssemblyInfoInputs.cache
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.AssemblyInfo.cs
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.RazorTargetAssemblyInfo.cache
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.dll
+C:\Users\Evann\Documents\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.pdb

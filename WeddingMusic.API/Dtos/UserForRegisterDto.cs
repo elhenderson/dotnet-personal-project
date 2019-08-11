@@ -13,5 +13,8 @@ namespace Game.API.Dtos
 
         [Required]
         public string WeddingDate { get; set; }
+
+        [Required]
+        public string Instruments { get; set; }
     }
 }

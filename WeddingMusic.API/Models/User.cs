@@ -13,6 +13,8 @@ namespace WeddingMusic.API.Models
 
         public string WeddingDate { get; set; }
 
+        public string Instruments { get; set; }
+
         public string Venue { get; set; }
 
         public string Street { get; set; }

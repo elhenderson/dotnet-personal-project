@@ -36,7 +36,8 @@ namespace Game.API.Controllers
       var userToCreate = new User
       {
         Username = userForRegisterDto.Username,
-        WeddingDate = userForRegisterDto.WeddingDate
+        WeddingDate = userForRegisterDto.WeddingDate,
+        Instruments = userForRegisterDto.Instruments
       };
 
       var createdUser = await _repo.Register(userToCreate, userForRegisterDto.Password);

@@ -6,14 +6,34 @@
     <input type="text" class="form-control" required name="username" [(ngModel)]="model.username" placeholder="Username">
   </div>
 
+  <div class="form-group">
+    <input type="password" class="form-control" required name="password" [(ngModel)]="model.password" placeholder="Password">
+  </div>
+
   <p>When is your wedding?</p>
   <input [matDatepicker]="myDatepicker" class="mg-auto" name="weddingDate" [(ngModel)]="model.weddingDate">
   <mat-datepicker #myDatepicker></mat-datepicker>
   <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
 
-  <div class="form-group">
-    <input type="password" class="form-control" required name="password" [(ngModel)]="model.password" placeholder="Password">
-  </div>
+  <p>Which instruments would you like?</p>
+
+  <select [(ngModel)]="model.instruments" name="instruments">
+    <option value=""></option>
+    <option value="String Quartet">String Quartet</option>
+    <option value="Flute & String Quartet" >Flute & String Quartet</option>
+    <option value="Trumpet & String Quartet">Trumpet & String Quartet</option>
+    <option value="Violin & Viola">Violin & Viola</option>
+    <option value="Violin & Bass">Violin & Bass</option>
+    <option value="Violin, Viola, & Bass">Violin, Viola, & Bass</option>
+    <option value="2 Violins, Viola, & Bass">2 Violins, Viola, & Bass</option>
+    <option value="2 Violins, Viola, Bass & Piano">2 Violins, Viola, Bass & Piano</option>
+    <option value="2 Violins, Bass">2 Violins, Bass</option>
+    <option value="2 Violins, Bass & Drums">2 Violins, Bass & Drums</option>
+    <option value="2 Violins">2 Violins</option>
+    <option value="Piano & Violin">Piano & Violin</option>
+    <option value="Violin, Bass & Drums">Violin, Bass & Drums</option>
+    <option value="Jazz Combo">Jazz Combo</option>
+  </select>
 
   <div class="form-group text-center">
     <button class="btn btn-success" type="submit">Register</button>
