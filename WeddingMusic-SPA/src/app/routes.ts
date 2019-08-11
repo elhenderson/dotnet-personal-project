@@ -14,8 +14,8 @@ export const appRoutes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
     children: [
-      {path: 'lineup/:id', component: LineupComponent, resolve: {LineupResolver}},
-      {path: 'lineup/edit', component: LineupEditComponent, resolve: {lineup: LineupResolver}},
+      {path: 'lineup/:id', component: LineupComponent, resolve: {lineup: LineupResolver}},
+      {path: 'lineup/edit', component: LineupEditComponent},
       {path: 'songs', component: SongComponent},
       {path: 'saved-songs', component: SavedSongsComponent}
     ]

@@ -2,6 +2,7 @@ namespace WeddingMusic.API.Dtos
 {
     public class LineupForDetailedDto
     {
+        public int Id { get; set; }
         public string Prelude { get; set; }
 
         public string Family { get; set; }

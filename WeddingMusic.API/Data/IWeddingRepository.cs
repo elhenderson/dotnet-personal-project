@@ -17,6 +17,8 @@ namespace WeddingMusic.API.Data
 
          Task<User> GetUser(int id);
 
+         Task<Lineup> GetLineup(int id);
+
          Task<IEnumerable<Song>> GetSongs();
     }
 }
