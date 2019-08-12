@@ -25,6 +25,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { LineupEditComponent } from './lineup/lineupEdit/lineupEdit.component';
 import { LineupService } from './_services/lineup.service';
 import { LineupResolver } from './_resolvers/lineup.resolver';
+import { LoginComponent } from './login/login.component';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -41,7 +42,8 @@ export function tokenGetter() {
       SongCardComponent,
       SavedSongsComponent,
       LineupComponent,
-      LineupEditComponent
+      LineupEditComponent,
+      LoginComponent
    ],
    imports: [
       BrowserModule,

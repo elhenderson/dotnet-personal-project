@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Evann\\Documents\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\Game.API.csproj": {}
+    "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/Game.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Evann\\Documents\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\Game.API.csproj": {
+    "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/Game.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Evann\\Documents\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\Game.API.csproj",
+        "projectUniqueName": "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/Game.API.csproj",
         "projectName": "Game.API",
-        "projectPath": "C:\\Users\\Evann\\Documents\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\Game.API.csproj",
-        "packagesPath": "C:\\Users\\Evann\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Evann\\Documents\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\obj\\",
+        "projectPath": "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/Game.API.csproj",
+        "packagesPath": "/Users/evann/.nuget/packages/",
+        "outputPath": "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Evann\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/evann/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"

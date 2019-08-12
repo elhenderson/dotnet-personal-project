@@ -9,7 +9,7 @@ import { AuthService } from '../_services/auth.service';
 })
 export class HomeComponent implements OnInit {
   registerMode = false;
-  values: any;
+  loginMode = false;
 
   constructor(private http: HttpClient, private authService: AuthService) { }
 
@@ -20,9 +20,17 @@ export class HomeComponent implements OnInit {
     this.registerMode = true;
   }
 
+  loginToggle() {
+    this.loginMode = true;
+  }
+
 
   cancelRegisterMode(registerMode: boolean) {
     this.registerMode = registerMode;
+  }
+
+  cancelLoginMode(loginMode: boolean) {
+    this.loginMode = loginMode;
   }
 
   loggedIn() {
