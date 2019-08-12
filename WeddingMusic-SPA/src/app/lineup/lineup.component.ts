@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LineupComponent implements OnInit {
   lineup: Lineup;
+  lineupEditMode = false;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -18,4 +19,11 @@ export class LineupComponent implements OnInit {
     });
   }
 
+  lineupEditToggle() {
+    this.lineupEditMode = true;
+  }
+
+  cancelLineupEditMode(lineupEditMode: boolean) {
+    this.lineupEditMode = lineupEditMode;
+  }
 }

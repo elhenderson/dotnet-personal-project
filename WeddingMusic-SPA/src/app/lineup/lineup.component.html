@@ -1,6 +1,5 @@
-<div class="card">
-  <div class="card-body">
-    <h3 class="card-title">Your Lineup</h3>
+<div *ngIf="!lineupEditMode" class="container">
+    <h3>Your Lineup</h3>
     <hr>
     <div class="lineup-item">
       <h5 class="lineup-title">Prelude</h5>
@@ -30,5 +29,6 @@
       <h5 class="lineup-title">Postlude</h5>
       <p>{{lineup?.postlude}}</p>
     </div>
-  </div>
+    <button class="btn btn-warning" [routerLink]="['/lineup/edit']" routerLinkActive="router-link-active">Edit Lineup</button>
+    
 </div>

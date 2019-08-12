@@ -1,4 +1,4 @@
-.card {
+.container {
   text-align: center;
 }
 
@@ -8,4 +8,8 @@
 
 .lineup-title {
   text-decoration: underline;
+}
+
+h3 {
+  margin-top: 15px;
 }

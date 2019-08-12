@@ -26,6 +26,7 @@ import { LineupEditComponent } from './lineup/lineupEdit/lineupEdit.component';
 import { LineupService } from './_services/lineup.service';
 import { LineupResolver } from './_resolvers/lineup.resolver';
 import { LoginComponent } from './login/login.component';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -70,7 +71,8 @@ export function tokenGetter() {
       UserService,
       SongService,
       LineupService,
-      LineupResolver
+      LineupResolver,
+      PreventUnsavedChanges
    ],
    bootstrap: [
       AppComponent

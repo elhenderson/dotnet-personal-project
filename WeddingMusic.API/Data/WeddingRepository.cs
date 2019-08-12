@@ -46,6 +46,13 @@ namespace WeddingMusic.API.Data
       return lineup;
     }
 
+    public async Task<Lineup> EditLineup(int id)
+    {
+        var lineup = await _context.Lineup.FirstOrDefaultAsync(u => u.UserId == id);
+
+        return lineup;
+    }
+
     public async Task<IEnumerable<Song>> GetSongs()
     {
         var songs = await _context.Songs.ToListAsync();

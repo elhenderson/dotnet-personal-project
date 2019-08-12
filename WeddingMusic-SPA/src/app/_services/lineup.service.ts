@@ -16,4 +16,11 @@ export class LineupService {
     return this.http.get<Lineup>(this.baseUrl + 'lineup/' + id);
   }
 
+  editLineup(id): Observable<Lineup> {
+    return this.http.get<Lineup>(this.baseUrl + 'lineup/' + id + '/edit/');
+  }
+
+  updateLineup(id: number, lineup: Lineup) {
+    return this.http.put(this.baseUrl + 'lineup/' + id, lineup);
+  }
 }
