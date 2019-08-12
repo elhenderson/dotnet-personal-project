@@ -12,5 +12,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6"/>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0"/>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1"/>
+    <PackageReference Include="SpotifyAPI.Web" Version="4.2.0"/>
+    <PackageReference Include="SpotifyAPI.Web.Auth" Version="4.2.0"/>
   </ItemGroup>
 </Project>

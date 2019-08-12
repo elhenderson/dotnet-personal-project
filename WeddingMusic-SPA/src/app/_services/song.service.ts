@@ -10,6 +10,13 @@ const httpOptions = {
   })
 };
 
+const access_token = '23436e2031b04f5783a7865b99489a04';
+
+const spotifyOptions = {
+  headers: new HttpHeaders({'grant_type': 'client_credentials'})
+};
+
+ 
 @Injectable({
   providedIn: 'root'
 })
@@ -24,5 +31,10 @@ export class SongService {
 
   getSong(id): Observable<Song> {
     return this.http.get<Song>(this.baseUrl + 'songs/' + id, httpOptions);
+  }
+
+  getSpotify(title) {
+    const track = this.http.get(this.baseUrl + 'spotify/' + title);
+    return track;
   }
 }

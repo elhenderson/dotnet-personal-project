@@ -67,6 +67,14 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "SpotifyAPI.Web": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "SpotifyAPI.Web.Auth": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             }
           },
           "imports": [

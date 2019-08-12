@@ -80,5 +80,7 @@ namespace Game.API.Controllers
           token = tokenHandler.WriteToken(token)
       });
     }
+
+    
   }
 }
