@@ -12,6 +12,7 @@ namespace WeddingMusic.API.Helpers
             CreateMap<User, UserForDetailedDto>();
             CreateMap<Lineup, LineupForDetailedDto>();
             CreateMap<LineupForUpdateDto, Lineup>();
+            CreateMap<UserForRegisterDto, User>();
         }
     }
 }

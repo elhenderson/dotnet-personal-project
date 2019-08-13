@@ -1,6 +1,7 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Game.API.Dtos
+namespace WeddingMusic.API.Dtos
 {
     public class UserForRegisterDto
     {
@@ -12,9 +13,18 @@ namespace Game.API.Dtos
         public string Password { get; set; }
 
         [Required]
-        public string WeddingDate { get; set; }
+        public DateTime WeddingDate { get; set; }
 
         [Required]
         public string Instruments { get; set; }
+
+        public DateTime Created { get; set; }
+
+        public DateTime LastActive { get; set; }
+        public UserForRegisterDto()
+        {
+            Created = DateTime.Now;
+            LastActive = DateTime.Now;
+        }
     }
 }

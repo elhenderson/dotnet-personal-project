@@ -1,43 +1,67 @@
-<form #registerForm="ngForm" (ngSubmit)="register()">
+<form [formGroup]="registerForm" (ngSubmit)="register()">
   <h2 class="text-center text-primary">Sign Up</h2>
   <hr>
 
   <div class="form-group">
-    <input type="text" class="form-control" required name="username" [(ngModel)]="model.username" placeholder="Username">
+    <input [ngClass]="{'is-invalid': registerForm.get('username').errors && registerForm.get('username').touched }" type="text" class="form-control" formControlName="username"  placeholder="Username">
+    <div class="invalid-feedback">Please provide a valid email</div>
   </div>
 
   <div class="form-group">
-    <input type="password" class="form-control" required name="password" [(ngModel)]="model.password" placeholder="Password">
+    <input [ngClass]="{'is-invalid': registerForm.get('password').errors && registerForm.get('password').touched }" type="password" class="form-control" formControlName="password" placeholder="Password">
+    <div class="invalid-feedback" *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched" >Password is required</div>
+    <div class="invalid-feedback" *ngIf="registerForm.get('password').hasError('minlength') && registerForm.get('password').touched" >Password must be at least 4 characters</div>
+    <div class="invalid-feedback" *ngIf="registerForm.get('password').hasError('maxlength') && registerForm.get('password').touched" >Password cannot exceed 8 characters</div>
   </div>
 
-  <p>When is your wedding?</p>
+  <div class="form-group">
+    <input type="password" [ngClass]="{'is-invalid': registerForm.get('confirmPassword').errors && registerForm.get('confirmPassword').touched || registerForm.get('password').touched && registerForm.hasError('mismatch')}" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password">
+    <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassword').hasError('required') && registerForm.get('confirmPassword').touched" >Password is required</div>
+    <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassword').hasError('mismatch') && registerForm.get('confirmPassword').touched" >Passwords must match</div>
+  </div>
+
+  <div class="form-group">
+    <input [ngClass]="{'is-invalid': registerForm.get('weddingDate').errors && registerForm.get('weddingDate').touched}" class="form-control"
+      placeholder="Wedding Date" formControlName="weddingDate" type="text" bsDatepicker [bsConfig]="bsConfig">
+    <div class="invalid-feedback" *ngIf="registerForm.get('weddingDate').touched && registerForm.get('weddingDate').hasError('required')">Wedding Date is required</div>
+  </div>
+
+  <div class="form-group">
+      <p>Which instruments would you like?</p>
+      <select [ngClass]="{'is-invalid': registerForm.get('instruments').errors && registerForm.get('instruments').touched}" class="form-control"
+       formControlName="instruments" type="text">
+        <option value=""></option>
+        <option value="String Quartet">String Quartet</option>
+        <option value="Flute & String Quartet" >Flute & String Quartet</option>
+        <option value="Trumpet & String Quartet">Trumpet & String Quartet</option>
+        <option value="Violin & Viola">Violin & Viola</option>
+        <option value="Violin & Bass">Violin & Bass</option>
+        <option value="Violin, Viola, & Bass">Violin, Viola, & Bass</option>
+        <option value="2 Violins, Viola, & Bass">2 Violins, Viola, & Bass</option>
+        <option value="2 Violins, Viola, Bass & Piano">2 Violins, Viola, Bass & Piano</option>
+        <option value="2 Violins, Bass">2 Violins, Bass</option>
+        <option value="2 Violins, Bass & Drums">2 Violins, Bass & Drums</option>
+        <option value="2 Violins">2 Violins</option>
+        <option value="Piano & Violin">Piano & Violin</option>
+        <option value="Violin, Bass & Drums">Violin, Bass & Drums</option>
+        <option value="Jazz Combo">Jazz Combo</option>
+      </select> 
+    
+      <div class="invalid-feedback" *ngIf="registerForm.get('instruments').touched && registerForm.get('instruments').hasError('required')">Instruments are required</div>
+    </div>
+
+
+
+  
+
+    <!-- <p>When is your wedding?</p>
   <input [matDatepicker]="myDatepicker" class="mg-auto" name="weddingDate" [(ngModel)]="model.weddingDate">
   <mat-datepicker #myDatepicker></mat-datepicker>
-  <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle>
-
-  <p>Which instruments would you like?</p>
-
-  <select [(ngModel)]="model.instruments" name="instruments">
-    <option value=""></option>
-    <option value="String Quartet">String Quartet</option>
-    <option value="Flute & String Quartet" >Flute & String Quartet</option>
-    <option value="Trumpet & String Quartet">Trumpet & String Quartet</option>
-    <option value="Violin & Viola">Violin & Viola</option>
-    <option value="Violin & Bass">Violin & Bass</option>
-    <option value="Violin, Viola, & Bass">Violin, Viola, & Bass</option>
-    <option value="2 Violins, Viola, & Bass">2 Violins, Viola, & Bass</option>
-    <option value="2 Violins, Viola, Bass & Piano">2 Violins, Viola, Bass & Piano</option>
-    <option value="2 Violins, Bass">2 Violins, Bass</option>
-    <option value="2 Violins, Bass & Drums">2 Violins, Bass & Drums</option>
-    <option value="2 Violins">2 Violins</option>
-    <option value="Piano & Violin">Piano & Violin</option>
-    <option value="Violin, Bass & Drums">Violin, Bass & Drums</option>
-    <option value="Jazz Combo">Jazz Combo</option>
-  </select>
+  <mat-datepicker-toggle [for]="myDatepicker"></mat-datepicker-toggle> -->
 
   <div class="form-group text-center">
     <button class="btn btn-success" type="submit">Register</button>
     <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
-  </div>
+  </div> 
 
 </form>

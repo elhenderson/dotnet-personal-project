@@ -16,16 +16,28 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 })
 export class SongCardComponent implements OnInit {
   @Input() song: Song;
-  token: any;
 
   constructor(private songService: SongService, private alertify: AlertifyService, private route: ActivatedRoute, http: HttpClient) { }
 
   ngOnInit() {
+
   }
 
-  previewSong(title) {
-    this.songService.getSpotify(title).subscribe((res: Response) => {
-     return console.log(res);
+  previewSong(title, artist) {
+    this.songService.getSpotify(title, artist).subscribe((res: Response) => {
+      if (res.preview_url !== null) {
+        window.open(res.preview_url, '_blank', 'top=500,left=500,width=200,height=100');
+      } else if (res.preview_url === null) {
+        this.songService.getSpotifyAlt(title, artist).subscribe((res: Response) => {
+          if (res.preview_url !== null) {
+            window.open(res.preview_url, '_blank', 'top=500,left=500,width=200,height=100');
+          } else {
+            this.alertify.error('Sorry, there is no sample for this selection');
+          }
+        });
+      } else {
+        this.alertify.error('Sorry, there is no sample for this selection');
+      }
     });
   }
 

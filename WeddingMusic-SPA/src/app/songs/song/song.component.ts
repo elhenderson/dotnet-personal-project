@@ -10,6 +10,7 @@ import { Song } from '../../_models/song';
 })
 export class SongComponent implements OnInit {
   songs: Song[];
+  token: any;
 
   constructor(private songService: SongService, private alertify: AlertifyService) { }
 
