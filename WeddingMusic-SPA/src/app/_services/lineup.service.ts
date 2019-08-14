@@ -21,6 +21,6 @@ export class LineupService {
   }
 
   updateLineup(id: number, lineup: Lineup) {
-    return this.http.put(this.baseUrl + 'lineup/' + id, lineup);
+    return this.http.post(this.baseUrl + 'lineup/' + id, lineup);
   }
 }

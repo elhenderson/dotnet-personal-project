@@ -8,16 +8,18 @@ import { Song } from '../_models/song';
 import { SongService } from '../_services/song.service';
 
 @Injectable()
-export class SongResolver implements Resolve<Song[]> {
+export class SavedSongResolver implements Resolve<Song[]> {
   pageNumber = 1;
   pageSize = 5;
+  savedParam = 'Saved';
   userId = 0;
 
   constructor(private songService: SongService, private router: Router,
     private alertify: AlertifyService, private authService: AuthService) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<Song[]> {
-    return this.songService.getSongs(this.pageNumber, this.pageSize, null, null, this.userId).pipe(
+    this.userId = this.authService.decodedToken.nameid;
+    return this.songService.getSongs(this.pageNumber, this.pageSize, null, this.savedParam, this.userId).pipe(
       catchError(error => {
         this.alertify.error('Problem retrieving data');
         this.router.navigate(['/home']);

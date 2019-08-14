@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Game.API/bin/Debug/netcoreapp2.2/DatingApp.API.dll",
+            "program": "${workspaceFolder}/WeddingMusic.API/bin/Debug/netcoreapp2.2/WeddingMusic.API.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Game.API",
+            "cwd": "${workspaceFolder}/WeddingMusic.API",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

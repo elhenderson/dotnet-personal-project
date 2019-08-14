@@ -2,6 +2,7 @@ namespace WeddingMusic.API.Helpers
 {
     public class SongParams
     {
+        public int SongId;
         private const int MaxPageSize = 50;
         public int PageNumber { get; set; } = 1;
         private int pageSize = 10;
@@ -15,6 +16,9 @@ namespace WeddingMusic.API.Helpers
 
         public string OrderBy { get; set; }
         
+        public bool Saved { get; set; } = false;
+
+        public int UserId { get; set; }
         
     }
 }

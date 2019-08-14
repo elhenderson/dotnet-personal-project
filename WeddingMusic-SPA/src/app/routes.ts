@@ -8,6 +8,7 @@ import { LineupResolver } from './_resolvers/lineup.resolver';
 import { LineupEditComponent } from './lineup/lineupEdit/lineupEdit.component';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { SongResolver } from './_resolvers/song.resolver';
+import { SavedSongResolver } from './_resolvers/savedSong.resolver';
 
 export const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -19,7 +20,7 @@ export const appRoutes: Routes = [
       {path: 'lineup', component: LineupComponent, resolve: {lineup: LineupResolver}},
       {path: 'lineup/edit', component: LineupEditComponent, resolve: {lineup: LineupResolver}, canDeactivate: [PreventUnsavedChanges]},
       {path: 'songs', component: SongComponent, resolve: {song: SongResolver}},
-      {path: 'saved-songs', component: SavedSongsComponent}
+      {path: 'saved-songs', component: SavedSongsComponent, resolve: {song: SavedSongResolver}}
     ]
   },
   {path: '**', redirectTo: '', pathMatch: 'full'}

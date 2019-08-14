@@ -4,6 +4,7 @@ import { AlertifyService } from '../../_services/alertify.service';
 import { Song } from '../../_models/song';
 import { ActivatedRoute } from '@angular/router';
 import { Pagination, PaginatedResult } from 'src/app/_models/pagination';
+import { ignoreElements } from 'rxjs/operators';
 
 @Component({
   selector: 'app-song',
@@ -47,7 +48,7 @@ export class SongComponent implements OnInit {
   }
 
   loadSongs() {
-    this.songService.getSongs(this.pagination.currentPage, this.pagination.itemsPerPage, this.songParams)
+    this.songService.getSongs(this.pagination.currentPage, this.pagination.itemsPerPage, this.songParams, null, null)
     .subscribe((res: PaginatedResult<Song[]>) => {
       this.songs = res.result;
       this.pagination = res.pagination;

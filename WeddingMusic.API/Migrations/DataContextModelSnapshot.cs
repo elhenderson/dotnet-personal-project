@@ -56,6 +56,19 @@ namespace Game.API.Migrations
                     b.ToTable("Lineup");
                 });
 
+            modelBuilder.Entity("WeddingMusic.API.Models.SavedSong", b =>
+                {
+                    b.Property<int>("UserId");
+
+                    b.Property<int>("SongId");
+
+                    b.HasKey("UserId", "SongId");
+
+                    b.HasIndex("SongId");
+
+                    b.ToTable("SavedSongs");
+                });
+
             modelBuilder.Entity("WeddingMusic.API.Models.Song", b =>
                 {
                     b.Property<int>("Id")
@@ -91,8 +104,6 @@ namespace Game.API.Migrations
 
                     b.Property<byte[]>("PasswordSalt");
 
-                    b.Property<string>("SavedSongs");
-
                     b.Property<string>("Street");
 
                     b.Property<string>("Username");
@@ -112,6 +123,19 @@ namespace Game.API.Migrations
                         .WithMany("Lineup")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("WeddingMusic.API.Models.SavedSong", b =>
+                {
+                    b.HasOne("WeddingMusic.API.Models.Song", "Song")
+                        .WithMany()
+                        .HasForeignKey("SongId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WeddingMusic.API.Models.User", "User")
+                        .WithMany("Song")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }

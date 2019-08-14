@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace WeddingMusic.API.Models
 {
     public class Song
@@ -11,6 +13,7 @@ namespace WeddingMusic.API.Models
         public string Image { get; set; }
 
         public string Genre { get; set; }
+
 
     }
 }

@@ -21,7 +21,7 @@ export class SongService {
 
   constructor(private http: HttpClient) { }
 
-  getSongs(page?, itemsPerPage?, songParams?): Observable<PaginatedResult<Song[]>> {
+  getSongs(page?, itemsPerPage?, songParams?, savedParam?, userId?): Observable<PaginatedResult<Song[]>> {
     const paginatedResult: PaginatedResult<Song[]> = new PaginatedResult<Song[]>();
 
     let params = new HttpParams();
@@ -37,6 +37,15 @@ export class SongService {
         params = params.append('genre', songParams.genre);
         params = params.append('orderBy', songParams.orderBy);
     }
+
+    if (savedParam === 'Saved') {
+      params = params.append('saved', 'true');
+    }
+
+    if (userId != null) {
+      params = params.append('userId', userId);
+    }
+
 
     return this.http.get<Song[]>(this.baseUrl + 'songs/', {observe: 'response', params})
       .pipe(
@@ -61,6 +70,10 @@ export class SongService {
   getSpotifyAlt(title, artist) {
     const track = this.http.get(this.baseUrl + 'spotify/alt/' + title + ' ' + artist);
     return track;
+  }
+
+  savedSong(userId: number, songId: number) {
+    return this.http.post(this.baseUrl + 'songs/' + userId + '/saved-song/' + songId, {});
   }
 
 }

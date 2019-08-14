@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190809180000_AddedImage")]
-    partial class AddedImage
+    [Migration("20190814204335_savedSongs")]
+    partial class savedSongs
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,6 +58,19 @@ namespace Game.API.Migrations
                     b.ToTable("Lineup");
                 });
 
+            modelBuilder.Entity("WeddingMusic.API.Models.SavedSong", b =>
+                {
+                    b.Property<int>("UserId");
+
+                    b.Property<int>("SongId");
+
+                    b.HasKey("UserId", "SongId");
+
+                    b.HasIndex("SongId");
+
+                    b.ToTable("SavedSongs");
+                });
+
             modelBuilder.Entity("WeddingMusic.API.Models.Song", b =>
                 {
                     b.Property<int>("Id")
@@ -65,9 +78,11 @@ namespace Game.API.Migrations
 
                     b.Property<string>("Artist");
 
+                    b.Property<string>("Genre");
+
                     b.Property<string>("Image");
 
-                    b.Property<string>("Sample");
+                    b.Property<string>("SampleArtist");
 
                     b.Property<bool>("Saved");
 
@@ -85,11 +100,11 @@ namespace Game.API.Migrations
 
                     b.Property<string>("City");
 
+                    b.Property<string>("Instruments");
+
                     b.Property<byte[]>("PasswordHash");
 
                     b.Property<byte[]>("PasswordSalt");
-
-                    b.Property<string>("SavedSongs");
 
                     b.Property<string>("Street");
 
@@ -110,6 +125,19 @@ namespace Game.API.Migrations
                         .WithMany("Lineup")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("WeddingMusic.API.Models.SavedSong", b =>
+                {
+                    b.HasOne("WeddingMusic.API.Models.Song", "Song")
+                        .WithMany()
+                        .HasForeignKey("SongId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("WeddingMusic.API.Models.User", "User")
+                        .WithMany("Song")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }

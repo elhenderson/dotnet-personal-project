@@ -39,7 +39,7 @@ namespace WeddingMusic.API.Controllers
       return Ok(lineup);
     }
 
-    [HttpPut("{id}")]
+    [HttpPost("{id}")]
     public async Task<IActionResult> UpdateLineup(int id, LineupForUpdateDto lineupForUpdateDto)
     {
       if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))

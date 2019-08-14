@@ -18,12 +18,17 @@ namespace WeddingMusic.API.Data
 
          Task<User> GetUser(int id);
 
+         Task<Lineup> AddLineup(int userId);
+
          Task<Lineup> GetLineup(int id);
 
          Task<Lineup> EditLineup(int id);
 
+         Task<Song> GetSong(int id);
+
          Task<PagedList<Song>> GetSongs(SongParams songParams);
 
+        Task<SavedSong> GetSavedSong(int userId, int songId);
     
     }
 }

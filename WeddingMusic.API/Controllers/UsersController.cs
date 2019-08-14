@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WeddingMusic.API.Data;
 using WeddingMusic.API.Dtos;
+using WeddingMusic.API.Models;
 
 namespace WeddingMusic.API.Controllers
 {
@@ -42,5 +44,6 @@ namespace WeddingMusic.API.Controllers
 
       return Ok(userToReturn);
     }
+
   }
 }

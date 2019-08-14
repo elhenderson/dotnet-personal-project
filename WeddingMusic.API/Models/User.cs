@@ -21,7 +21,10 @@ namespace WeddingMusic.API.Models
 
         public string City { get; set; }
 
-        public string SavedSongs { get; set; }
+        // public ICollection<Song[]> SavedSongs { get; set; }
+
+
+        public ICollection<SavedSong> Song { get; set; }
 
         public ICollection<Lineup> Lineup { get; set; }
 
