@@ -12,6 +12,9 @@ namespace WeddingMusic.API.Helpers
         }
 
         public string Genre { get; set; }
+
+        public string OrderBy { get; set; }
+        
         
     }
 }

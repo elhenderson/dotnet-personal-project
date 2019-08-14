@@ -14,9 +14,13 @@ export class SongComponent implements OnInit {
   songs: Song[];
   songParams: any = {};
   genreList = [
-    {value: 'all', display: 'All'},
+    {value: null, display: 'All'},
     {value: 'metal', display: 'Metal'},
     {value: 'classical', display: 'Classical'}
+  ];
+  orderList = [
+    {value: 'title', display: 'Title'},
+    {value: 'artist', display: 'Artist'}
   ];
   pagination: Pagination;
 
@@ -37,6 +41,8 @@ export class SongComponent implements OnInit {
   }
 
   resetFilters() {
+    this.songParams.orderBy = 'title';
+    this.songParams.genre = '';
     this.loadSongs();
   }
 

@@ -21,7 +21,7 @@ export class SongService {
 
   constructor(private http: HttpClient) { }
 
-  getSongs(page?, itemsPerPage?, songParams): Observable<PaginatedResult<Song[]>> {
+  getSongs(page?, itemsPerPage?, songParams?): Observable<PaginatedResult<Song[]>> {
     const paginatedResult: PaginatedResult<Song[]> = new PaginatedResult<Song[]>();
 
     let params = new HttpParams();
@@ -34,9 +34,8 @@ export class SongService {
 
 
     if (songParams != null) {
-      if (songParams.genre !== 'all') {
         params = params.append('genre', songParams.genre);
-      }
+        params = params.append('orderBy', songParams.orderBy);
     }
 
     return this.http.get<Song[]>(this.baseUrl + 'songs/', {observe: 'response', params})

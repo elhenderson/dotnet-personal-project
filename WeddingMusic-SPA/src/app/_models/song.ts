@@ -2,7 +2,7 @@ export interface Song {
   id: number;
   title: string;
   artist?: string;
-  sample?: string;
+  sampleArtist?: string;
   saved?: boolean;
   image?: string;
 }

@@ -57,9 +57,25 @@ namespace WeddingMusic.API.Data
 
     public async Task<PagedList<Song>> GetSongs(SongParams songParams)
     {
-        var songs =  _context.Songs.AsQueryable();
+        var songs =  _context.Songs.OrderBy(u => u.Title).AsQueryable();
 
-        songs = songs.Where(u => u.Genre == songParams.Genre);
+        if (songs.Where(u => u.Genre == songParams.Genre).Any()) {
+            songs = songs.Where(u => u.Genre == songParams.Genre).OrderBy(u => u.Title);
+        }
+
+        if (!string.IsNullOrEmpty(songParams.OrderBy))
+        {
+            switch (songParams.OrderBy)
+            {
+                case "artist": 
+                    songs = songs.OrderBy(u => u.Artist);
+                    break;
+                default:
+                    songs = songs.OrderBy(u => u.Title);
+                    break;
+            }
+        }
+       
 
         return await PagedList<Song>.CreateAsync(songs, songParams.PageNumber, songParams.PageSize);
     }
