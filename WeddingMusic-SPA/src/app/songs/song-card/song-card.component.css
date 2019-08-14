@@ -38,3 +38,7 @@
 ul li .btn {
   padding: 15px;
 }
+
+.card-body {
+  text-align: center;
+}

@@ -5,6 +5,7 @@ using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web.Enums;
 using SpotifyAPI.Web.Models;
 using WeddingMusic.API.Data;
+using WeddingMusic.API.Helpers;
 using WeddingMusic.API.Models;
 
 namespace WeddingMusic.API.Controllers
@@ -22,9 +23,11 @@ namespace WeddingMusic.API.Controllers
 
     [HttpGet]
 
-    public async Task<IActionResult> GetSongs() 
+    public async Task<IActionResult> GetSongs([FromQuery]SongParams songParams) 
     {
-        var songs = await _repo.GetSongs();
+        var songs = await _repo.GetSongs(songParams);
+
+        Response.AddPagination(songs.CurrentPage, songs.PageSize, songs.TotalCount, songs.TotalPages);
 
         return Ok(songs);
     }

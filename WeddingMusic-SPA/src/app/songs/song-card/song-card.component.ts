@@ -28,9 +28,9 @@ export class SongCardComponent implements OnInit {
       if (res.preview_url !== null) {
         window.open(res.preview_url, '_blank', 'top=500,left=500,width=200,height=100');
       } else if (res.preview_url === null) {
-        this.songService.getSpotifyAlt(title, artist).subscribe((res: Response) => {
-          if (res.preview_url !== null) {
-            window.open(res.preview_url, '_blank', 'top=500,left=500,width=200,height=100');
+        this.songService.getSpotifyAlt(title, artist).subscribe((response: Response) => {
+          if (response.preview_url !== null) {
+            window.open(response.preview_url, '_blank', 'top=500,left=500,width=200,height=100');
           } else {
             this.alertify.error('Sorry, there is no sample for this selection');
           }

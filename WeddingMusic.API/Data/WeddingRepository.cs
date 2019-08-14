@@ -1,8 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Game.API.Data;
 using Game.API.Models;
 using Microsoft.EntityFrameworkCore;
+using WeddingMusic.API.Helpers;
 using WeddingMusic.API.Models;
 
 namespace WeddingMusic.API.Data
@@ -53,11 +55,13 @@ namespace WeddingMusic.API.Data
         return lineup;
     }
 
-    public async Task<IEnumerable<Song>> GetSongs()
+    public async Task<PagedList<Song>> GetSongs(SongParams songParams)
     {
-        var songs = await _context.Songs.ToListAsync();
+        var songs =  _context.Songs.AsQueryable();
 
-        return songs;
+        songs = songs.Where(u => u.Genre == songParams.Genre);
+
+        return await PagedList<Song>.CreateAsync(songs, songParams.PageNumber, songParams.PageSize);
     }
 
     public async Task<bool> SaveAll()

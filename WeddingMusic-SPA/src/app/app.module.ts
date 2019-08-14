@@ -4,7 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule, MatNativeDateModule} from '@angular/material';
-import {BsDropdownModule, BsDatepickerModule} from 'ngx-bootstrap';
+import {BsDropdownModule, BsDatepickerModule, PaginationModule} from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -27,6 +27,7 @@ import { LineupService } from './_services/lineup.service';
 import { LineupResolver } from './_resolvers/lineup.resolver';
 import { LoginComponent } from './login/login.component';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
+import { SongResolver } from './_resolvers/song.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -54,6 +55,7 @@ export function tokenGetter() {
       BrowserAnimationsModule,
       MatDatepickerModule,
       MatNativeDateModule,
+      PaginationModule.forRoot(),
       BsDropdownModule.forRoot(),
       BsDatepickerModule.forRoot(),
       RouterModule.forRoot(appRoutes),
@@ -74,7 +76,8 @@ export function tokenGetter() {
       SongService,
       LineupService,
       LineupResolver,
-      PreventUnsavedChanges
+      PreventUnsavedChanges,
+      SongResolver
    ],
    bootstrap: [
       AppComponent

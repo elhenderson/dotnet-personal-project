@@ -1,7 +1,41 @@
+<div class="text-center mt-3">
+    <h2>{{pagination.totalItems}} results</h2>
+  </div>
+  
+
 <div class="container mt-5">
+
+  <form class="form-inline" #form="ngForm" (ngSubmit)="loadSongs()" novalidate>
+  
+    <div class="form-group px-2">
+      <label for="genre">Genre: </label>
+      <select class="form-control ml-1" style="width: 130px" id="genre" name="genre" [(ngModel)]="songParams.genre">
+        <option *ngFor="let genre of genreList" [value]="genre.value">
+          {{genre.display}}
+        </option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-left:10px">Apply Filters</button>
+    <button type="button" class="btn btn-info" style="margin-left:10px" (click)="resetFilters()" >Reset Filter</button>
+  
+  </form>
+  <br>
+
   <div class="row">
     <div *ngFor="let song of songs" class="col-lg-2 col-md-3 col-sm-6">
       <app-song-card [song]="song"></app-song-card>
     </div>
   </div>
+</div>
+
+<div class="d-flex justify-content-center">
+    <pagination 
+      [boundaryLinks]="true" 
+      [totalItems]="pagination.totalItems"
+      [itemsPerPage]="pagination.itemsPerPage"
+      [(ngModel)]="pagination.currentPage"
+      (pageChanged)="pageChanged($event)"
+    previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
+
+  </pagination>
 </div>

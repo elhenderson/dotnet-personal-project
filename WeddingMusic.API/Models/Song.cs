@@ -9,5 +9,7 @@ namespace WeddingMusic.API.Models
         public bool Saved { get; set; }
 
         public string Image { get; set; }
+
+        public string Genre { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Game.API.Models;
+using WeddingMusic.API.Helpers;
 using WeddingMusic.API.Models;
 
 namespace WeddingMusic.API.Data
@@ -21,7 +22,7 @@ namespace WeddingMusic.API.Data
 
          Task<Lineup> EditLineup(int id);
 
-         Task<IEnumerable<Song>> GetSongs();
+         Task<PagedList<Song>> GetSongs(SongParams songParams);
 
     
     }
