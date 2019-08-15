@@ -6,6 +6,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { BsDatepickerConfig } from 'ngx-bootstrap';
 import { User } from '../_models/user';
 import { Router } from '@angular/router';
+import { LineupService } from '../_services/lineup.service';
 
 @Component({
   selector: 'app-register',
@@ -18,8 +19,8 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   bsConfig: Partial<BsDatepickerConfig>;
 
-  constructor(private authService: AuthService, private alertify: AlertifyService, 
-    private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private authService: AuthService, private alertify: AlertifyService,
+    private formBuilder: FormBuilder, private router: Router, private lineupService: LineupService) { }
 
   ngOnInit() {
     this.bsConfig = {
@@ -55,6 +56,12 @@ export class RegisterComponent implements OnInit {
         });
       });
     }
+  }
+
+  createLineup() {
+    setTimeout(function() {
+      this.lineupService.createLineup(this.authService.decodedToken.nameid);
+    }, 1000);
   }
 
   cancel() {

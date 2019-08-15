@@ -28,6 +28,12 @@ export class LineupEditComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.lineup = data['lineup'];
+      this.lineup.prelude = this.lineup.prelude.split('|');
+      this.lineup.family = this.lineup.family.split('|');
+      this.lineup.bridalParty = this.lineup.bridalParty.split('|');
+      this.lineup.processional = this.lineup.processional.split('|');
+      this.lineup.unity = this.lineup.unity.split('|');
+      this.lineup.recessional = this.lineup.recessional.split('|');
     });
   }
 
@@ -41,5 +47,11 @@ export class LineupEditComponent implements OnInit {
 
   cancel() {
     this.cancelLineupEdit.emit(false);
+  }
+
+  removeSong(index, section) {
+    
+    console.log([section]);
+    console.log(index);
   }
 }

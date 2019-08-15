@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../_services/auth.service';
+import { LineupService } from '../_services/lineup.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   registerMode = false;
   loginMode = false;
 
-  constructor(private http: HttpClient, private authService: AuthService) { }
+  constructor(private http: HttpClient, private authService: AuthService, private lineupService: LineupService) { }
 
   ngOnInit() {
   }
@@ -36,5 +37,7 @@ export class HomeComponent implements OnInit {
   loggedIn() {
     return this.authService.loggedIn();
   }
+
+
 
 }

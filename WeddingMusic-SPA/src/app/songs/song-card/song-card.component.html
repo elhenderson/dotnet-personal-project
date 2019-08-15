@@ -1,15 +1,46 @@
 <div class="card mb-4">
-    <div class="card-img-wrapper">
-      <img class="card-img-top" src="https://i.scdn.co/image/7bcb62c3da44e5377f74f257d24b728c7a92fb03" alt="{{song.title}}">
-      <ul class="list-inline member-icons animate text-center">
-        <li class="list-inline-item"><button class="btn btn-primary" [routerLink]="['/lineup/', song.id]" ><i class="fa fa-plus"></i></button></li>
-        <li class="list-inline-item"><button class="btn btn-primary" (click)="saveSong(song.id) " ><i class="fa fa-heart"></i></button></li>
-        <li class="list-inline-item"><button (click)=previewSong(song.title,song.sampleArtist) class="btn btn-primary"><i target="_blank" routerLinkActive="router-link-active" class="fa fa-play"><a></a></i></button></li>
-      </ul>
-    </div>
-    <div class="card-body p-1">
-      <h6 class="card-title text-center mb-1"><i class="fa fa-music"></i> {{song.title}}
-      </h6>
-      <p class="card-text text-muted text-center fa fa-user">{{song.artist}}</p>
-    </div>
+  <div class="card-img-wrapper">
+    <img class="card-img-top" src="https://i.scdn.co/image/7bcb62c3da44e5377f74f257d24b728c7a92fb03" alt="{{song.title}}">
+    <ul class="list-inline member-icons animate text-center">
+      <li class="list-inline-item"><button class="btn btn-primary" (click)="openModal(template)" ><i class="fa fa-plus"></i></button></li>
+      <li class="list-inline-item"><button class="btn btn-primary" (click)="saveSong(song.id) " ><i class="fa fa-heart"></i></button></li>
+      <li class="list-inline-item"><button (click)=previewSong(song.title,song.sampleArtist) class="btn btn-primary"><i target="_blank" routerLinkActive="router-link-active" class="fa fa-play"><a></a></i></button></li>
+    </ul>
   </div>
+  <div class="card-body p-1">
+    <h6 class="card-title text-center mb-1"><i class="fa fa-music"></i> {{song.title}}
+    </h6>
+    <p class="card-text text-muted text-center fa fa-user">{{song.artist}}</p>
+  </div>
+</div>
+
+<ng-template #template class="text-center">
+  <div class="modal-header">
+
+      <h4 class="modal-title">Add Song</h4>
+    
+    
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    
+  </div>
+  <div class="modal-body text-center">
+    <p>{{song.title}} by {{song.artist}}</p>
+    <form #addForm="ngForm" (ngSubmit)="addToLineup()" [formGroup]="addSongForm">
+      <div class="form-group">
+        <select class="form-control" formControlName="section">
+          <option value=""></option>
+          <option value="prelude">Prelude</option>
+          <option value="family">Family</option>
+          <option value="bridalParty">Bridal Party</option>
+          <option value="processional">Processional</option>
+          <option value="unity">Unity</option>
+          <option value="recessional">Recessional</option>
+          <option value="postlude">Postlude</option>
+        </select>
+      </div>
+    <button type="submit" class="btn btn-success">Add</button>
+    </form>
+  </div>
+</ng-template>

@@ -18,7 +18,7 @@ namespace WeddingMusic.API.Data
 
          Task<User> GetUser(int id);
 
-         Task<Lineup> AddLineup(int userId);
+         Task<Lineup> AddLineup(Lineup lineup, int userId);
 
          Task<Lineup> GetLineup(int id);
 

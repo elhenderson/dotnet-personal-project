@@ -22,7 +22,7 @@ namespace WeddingMusic.API.Controllers
       _repo = repo;
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id}", Name = "GetLineup")]
 
     public async Task<IActionResult> GetLineup(int id)
     {
@@ -39,7 +39,26 @@ namespace WeddingMusic.API.Controllers
       return Ok(lineup);
     }
 
-    [HttpPost("{id}")]
+    // [HttpPut("section/{id}")]
+    // public async Task<IActionResult> UpdateLineup(int id, LineupForUpdateDto lineupForUpdateDto, string section)
+    // {
+    //   if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+    //   {
+    //     return Unauthorized();
+    //   }
+
+    //   var lineupFromRepo = await _repo.GetLineup(id);
+
+    //   _mapper.Map(lineupForUpdateDto, lineupFromRepo.section);
+
+    //   if (await _repo.SaveAll()) {
+    //     return NoContent();
+    //   }
+
+    //   throw new Exception($"Updating lineup {id} failed on save");
+    // }
+
+    [HttpPut("{id}")]
     public async Task<IActionResult> UpdateLineup(int id, LineupForUpdateDto lineupForUpdateDto)
     {
       if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
@@ -56,6 +75,18 @@ namespace WeddingMusic.API.Controllers
       }
 
       throw new Exception($"Updating lineup {id} failed on save");
+    }
+
+    [HttpPost("{userId}")]
+    public async Task<IActionResult> CreateLineup(Lineup lineup, int userId)
+    {
+
+      var lineupToCreate = _mapper.Map<Lineup>(lineup);
+
+      var lineupToReturn = await _repo.AddLineup(lineupToCreate, userId);
+
+      return CreatedAtRoute("GetLineup", new {Controller= "Lineup", id = lineup.Id}, lineupToReturn);
+
     }
   }
 }

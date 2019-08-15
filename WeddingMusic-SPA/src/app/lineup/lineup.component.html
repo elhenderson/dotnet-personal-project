@@ -3,31 +3,45 @@
     <hr>
     <div class="lineup-item">
       <h5 class="lineup-title">Prelude</h5>
-      <p>{{lineup?.prelude}}</p>
+      <div *ngFor="let song of lineup.prelude" >
+        <p>{{song}}</p>
+      </div>
     </div>
     <div class="lineup-item">
       <h5 class="lineup-title">Family</h5>
-      <p>{{lineup?.family}}</p>
+      <div *ngFor="let song of lineup.family" >
+        <p>{{song}}</p>
+      </div>
     </div>
     <div class="lineup-item">
       <h5 class="lineup-title">Bridal Party</h5>
-      <p>{{lineup?.bridalParty}}</p>
+      <div *ngFor="let song of lineup.bridalParty" >
+        <p>{{song}}</p>
+      </div>
     </div>
     <div class="lineup-item">
       <h5 class="lineup-title">Processional</h5>
-      <p>{{lineup?.processional}}</p>
+      <div *ngFor="let song of lineup.processional" >
+        <p>{{song}}</p>
+      </div>
     </div>
     <div class="lineup-item">
       <h5 class="lineup-title">Unity</h5>
-      <p>{{lineup?.unity}}</p>
+      <div *ngFor="let song of lineup.unity" >
+        <p>{{song}}</p>
+      </div>
     </div>
     <div class="lineup-item">
       <h5 class="lineup-title">Recessional</h5>
-      <p>{{lineup?.recessional}}</p>
+      <div *ngFor="let song of lineup.recessional" >
+        <p>{{song}}</p>
+      </div>
     </div>
     <div class="lineup-item">
       <h5 class="lineup-title">Postlude</h5>
-      <p>{{lineup?.postlude}}</p>
+      <div *ngFor="let song of lineup.postlude" >
+        <p>{{song}}</p>
+      </div>
     </div>
     <button class="btn btn-warning" [routerLink]="['/lineup/edit']" routerLinkActive="router-link-active">Edit Lineup</button>
     

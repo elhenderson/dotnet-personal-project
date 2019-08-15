@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190814204335_savedSongs")]
-    partial class savedSongs
+    [Migration("20190815150823_Lineup")]
+    partial class Lineup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

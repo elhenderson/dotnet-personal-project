@@ -13,7 +13,9 @@ export class LineupResolver implements Resolve<Lineup> {
     private alertify: AlertifyService, private authService: AuthService) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<Lineup> {
-    return this.lineupService.getLineup(this.authService.decodedToken.nameid).pipe(
+
+    return this.lineupService.getLineup(this.authService.decodedToken.nameid)
+    .pipe(
       catchError(error => {
         this.alertify.error('Problem retrieving data');
         this.router.navigate(['/home']);

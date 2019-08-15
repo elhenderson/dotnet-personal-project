@@ -5,6 +5,8 @@ import { Song } from '../../_models/song';
 import { ActivatedRoute } from '@angular/router';
 import { Pagination, PaginatedResult } from 'src/app/_models/pagination';
 import { ignoreElements } from 'rxjs/operators';
+import { LineupService } from 'src/app/_services/lineup.service';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-song',
@@ -25,7 +27,8 @@ export class SongComponent implements OnInit {
   ];
   pagination: Pagination;
 
-  constructor(private songService: SongService, private alertify: AlertifyService, private route: ActivatedRoute) { }
+  constructor(private songService: SongService, private alertify: AlertifyService,
+     private route: ActivatedRoute, private lineupService: LineupService, private authService: AuthService) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
@@ -54,6 +57,13 @@ export class SongComponent implements OnInit {
       this.pagination = res.pagination;
     }, error => {
       this.alertify.error(error);
+    });
+  }
+
+  testLineup() {
+    console.log(+this.authService.decodedToken.nameid);
+    this.lineupService.createLineup(this.authService.decodedToken.nameid).subscribe(() => {
+      console.log("created");
     });
   }
 }

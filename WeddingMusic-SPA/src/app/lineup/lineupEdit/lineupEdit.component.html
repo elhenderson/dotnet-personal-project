@@ -8,7 +8,10 @@
       <hr>
       <div class="lineup-item">
         <h5 class="lineup-title">Prelude</h5>
-        <input name="prelude" [(ngModel)]="lineup.prelude" placeholder={{lineup.prelude}}>
+        <!-- <input name="prelude" [(ngModel)]="lineup.prelude" placeholder={{lineup.prelude}}> -->
+        <div *ngFor="let song of lineup.prelude; let i = index" >
+          {{song}}<button (click)="removeSong(i, lineup.prelude)" class="btn btn-danger">Remove</button>
+        </div>
       </div>
       <div class="lineup-item">
         <h5 class="lineup-title">Family</h5>

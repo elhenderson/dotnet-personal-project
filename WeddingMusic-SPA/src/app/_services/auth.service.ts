@@ -4,6 +4,7 @@ import {map} from 'rxjs/operators';
 import {JwtHelperService} from '@auth0/angular-jwt';
 import { environment } from 'src/environments/environment';
 import { User } from '../_models/user';
+import { LineupService } from './lineup.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class AuthService {
   jwtHelper = new JwtHelperService();
   decodedToken: any;
 
-constructor(private http: HttpClient) { }
+constructor(private http: HttpClient, private lineupService: LineupService) { }
 
   login(model: any) {
     return this.http.post(this.baseUrl + 'login', model)

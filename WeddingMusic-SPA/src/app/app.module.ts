@@ -4,7 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerModule, MatNativeDateModule} from '@angular/material';
-import {BsDropdownModule, BsDatepickerModule, PaginationModule} from 'ngx-bootstrap';
+import {BsDropdownModule, BsDatepickerModule, PaginationModule, ModalModule} from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -59,6 +59,7 @@ export function tokenGetter() {
       PaginationModule.forRoot(),
       BsDropdownModule.forRoot(),
       BsDatepickerModule.forRoot(),
+      ModalModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       JwtModule.forRoot({
          config: {

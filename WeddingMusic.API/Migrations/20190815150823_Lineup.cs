@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Game.API.Migrations
 {
-    public partial class savedSongs : Migration
+    public partial class Lineup : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
