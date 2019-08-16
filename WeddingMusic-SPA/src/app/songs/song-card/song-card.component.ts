@@ -72,7 +72,7 @@ export class SongCardComponent implements OnInit {
   }
 
   openModal(template: TemplateRef<any>) {
-    this.addSongForm = this.formBuilder.group({section: [''], song: `${this.song.title} by ${this.song.artist} |`});
+    this.addSongForm = this.formBuilder.group({section: [''], song: `|${this.song.title} by ${this.song.artist}`});
     this.modalRef = this.modalService.show(template);
     
   }

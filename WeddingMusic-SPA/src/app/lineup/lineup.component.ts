@@ -18,12 +18,12 @@ export class LineupComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.lineup = data['lineup'];
-      this.lineup.prelude = this.lineup.prelude.split('|');
-      this.lineup.family = this.lineup.family.split('|');
-      this.lineup.bridalParty = this.lineup.bridalParty.split('|');
-      this.lineup.processional = this.lineup.processional.split('|');
-      this.lineup.unity = this.lineup.unity.split('|');
-      this.lineup.recessional = this.lineup.recessional.split('|');
+      this.lineup.prelude = this.lineup.prelude.split('|').filter((el) => el.length !== 0);
+      this.lineup.family = this.lineup.family.split('|').filter((el) => el.length !== 0);
+      this.lineup.bridalParty = this.lineup.bridalParty.split('|').filter((el) => el.length !== 0);
+      this.lineup.processional = this.lineup.processional.split('|').filter((el) => el.length !== 0);
+      this.lineup.unity = this.lineup.unity.split('|').filter((el) => el.length !== 0);
+      this.lineup.recessional = this.lineup.recessional.split('|').filter((el) => el.length !== 0);
       console.log(this.lineup.prelude);
       if (this.lineup == null) {
         console.log("this is null")
