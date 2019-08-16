@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using Newtonsoft.Json;
 using WeddingMusic.API.Models;
 
@@ -15,7 +16,8 @@ namespace Game.API.Data
 
     public void SeedSongs()
     {
-        var songData = System.IO.File.ReadAllText("../wwwroot/SongSeedData.json");
+        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "SongSeedData.json");
+        var songData = System.IO.File.ReadAllText(filePath);
         var songs = JsonConvert.DeserializeObject<List<Song>>(songData);
 
         foreach (var song in songs)
