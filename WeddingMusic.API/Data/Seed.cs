@@ -15,7 +15,7 @@ namespace Game.API.Data
 
     public void SeedSongs()
     {
-        var songData = System.IO.File.ReadAllText("SEED DATA HERE");
+        var songData = System.IO.File.ReadAllText("SongSeedData.json");
         var songs = JsonConvert.DeserializeObject<List<Song>>(songData);
 
         foreach (var song in songs)
