@@ -18,8 +18,10 @@ export class SavedSongsComponent implements OnInit {
   songParams: any = {};
   genreList = [
     {value: null, display: 'All'},
-    {value: 'metal', display: 'Metal'},
-    {value: 'classical', display: 'Classical'}
+    {value: 'classical', display: 'Classical'},
+    {value: 'pop', display: 'Pop'},
+    {value: 'rock', display: 'Rock'},
+    {value: 'blues', display: 'Blues'}
   ];
   orderList = [
     {value: 'title', display: 'Title'},
