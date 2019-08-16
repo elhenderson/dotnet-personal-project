@@ -1,3 +1,13 @@
 .dropdown-toggle, .dropdown-item {
   cursor: pointer;
 }
+
+.nav-link {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown {
+    display: none;
+  }
+}

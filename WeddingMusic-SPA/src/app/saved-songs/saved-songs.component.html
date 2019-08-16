@@ -1,13 +1,14 @@
 <div class="text-center mt-3">
+    <h3>Your Saved Songs</h3>
     <h2>{{pagination.totalItems}} results</h2>
   </div>
   
 
 <div class="container mt-5">
 
-  <form class="form-inline" #form="ngForm" (ngSubmit)="loadSongs()" novalidate>
+  <form class="form-inline w-100 d-flex justify-content-center" #form="ngForm" (ngSubmit)="loadSongs()" novalidate>
   
-    <div class="form-group px-2">
+    <div class="form-group px-2 text-center">
       <label for="genre">Genre: </label>
       <select class="form-control ml-1" style="width: 130px" id="genre" name="genre" [(ngModel)]="songParams.genre">
         <option *ngFor="let genre of genreList" [value]="genre.value" >

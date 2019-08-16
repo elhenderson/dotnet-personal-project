@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Game.API.Data;
-using Game.API.Models;
 using Microsoft.EntityFrameworkCore;
 using WeddingMusic.API.Helpers;
 using WeddingMusic.API.Models;

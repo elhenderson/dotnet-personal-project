@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "7ae4c80a761412862fb9d5dcd01aff5006a9f740"
+    "signature": "1e2287b20320ba3105c47f12314f866f33d14160"
   },
   "compilationOptions": {
     "defines": [
@@ -30,6 +30,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.2.6",
           "Microsoft.NETCore.App": "2.2.0",
+          "Pomelo.EntityFrameworkCore.MySql": "2.2.0",
           "SpotifyAPI.Web": "4.2.0",
           "SpotifyAPI.Web.Auth": "4.2.0"
         },
@@ -168,6 +169,17 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
         }
       },
+      "MySqlConnector/0.49.2": {
+        "runtime": {
+          "lib/netcoreapp2.1/MySqlConnector.dll": {
+            "assemblyVersion": "0.49.2.0",
+            "fileVersion": "0.49.2.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/MySqlConnector.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.2": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -177,6 +189,37 @@
         },
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/2.2.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.6",
+          "MySqlConnector": "0.49.2",
+          "Pomelo.JsonObject": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
+      "Pomelo.JsonObject/2.2.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pomelo.JsonObject.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3619,12 +3662,33 @@
       "path": "microsoft.entityframeworkcore.sqlite.core/2.2.6",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.2.2.6.nupkg.sha512"
     },
+    "MySqlConnector/0.49.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AMdiJ1anymn/MnvSKkaWfZXs49WUsdGi/5nlVGIOQ5QYhRZIfAFobht+Y7rK1UtEUzbqnjCKUBI6Zpp4zzRupQ==",
+      "path": "mysqlconnector/0.49.2",
+      "hashPath": "mysqlconnector.0.49.2.nupkg.sha512"
+    },
     "Newtonsoft.Json/12.0.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "Pomelo.EntityFrameworkCore.MySql/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OIIR2ASp8J5VyIf2i9cli8BjvD0kZl5zCwi4DBR/E/D0WVt+iZyKwGhCLt1V9+KiXQbYcYAujuKN3cMmwk5nZg==",
+      "path": "pomelo.entityframeworkcore.mysql/2.2.0",
+      "hashPath": "pomelo.entityframeworkcore.mysql.2.2.0.nupkg.sha512"
+    },
+    "Pomelo.JsonObject/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dfe8owsB+u9amQhZHKCPy2YiIt9tK4iX3dBoSwKlNd2cbi7Yh38XU93LjlYVJ+8HhxS9UgDoUbhYEt3jXTxBRQ==",
+      "path": "pomelo.jsonobject/2.2.0",
+      "hashPath": "pomelo.jsonobject.2.2.0.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",

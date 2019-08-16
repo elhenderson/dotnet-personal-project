@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
   model: any = {};
-
+  navbarOpen = false;
   constructor(public authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
   ngOnInit() {
@@ -34,6 +34,14 @@ export class NavComponent implements OnInit {
     localStorage.removeItem('token');
     this.alertify.message('logged out');
     this.router.navigate(['/home']);
+  }
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
+  closeNavbarAfterSelection() {
+    this.navbarOpen = false;
   }
 
 }

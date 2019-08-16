@@ -42,3 +42,9 @@ ul li .btn {
 .card-body {
   text-align: center;
 }
+
+@media screen and (max-width: 767px) {
+  ul li .btn{
+    padding: 25px;
+  }
+}

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Game.API.Models;
 using WeddingMusic.API.Helpers;
 using WeddingMusic.API.Models;
 

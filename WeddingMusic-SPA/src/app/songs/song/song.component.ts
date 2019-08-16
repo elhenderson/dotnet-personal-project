@@ -60,10 +60,4 @@ export class SongComponent implements OnInit {
     });
   }
 
-  testLineup() {
-    console.log(+this.authService.decodedToken.nameid);
-    this.lineupService.createLineup(this.authService.decodedToken.nameid).subscribe(() => {
-      console.log("created");
-    });
-  }
 }

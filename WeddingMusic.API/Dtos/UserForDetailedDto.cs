@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Game.API.Models;
 
 namespace WeddingMusic.API.Dtos
 {

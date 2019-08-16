@@ -2,15 +2,27 @@
   <div class="container">
       <a class="navbar-brand" [routerLink]="['/home']" >Wedding Music</a>
 
-      <ul *ngIf='loggedIn()' class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active">
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <ul *ngIf='loggedIn()' class="navbar-nav mr-auto collapse navbar-collapse show" [ngClass]="{show: navbarOpen}" id="">
+        <li *ngIf="navbarOpen" class="nav-item">
+            <a >
+              Welcome {{authService.decodedToken?.unique_name | titlecase}}
+            </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" (click)="closeNavbarAfterSelection()">
           <a class="nav-link" [routerLink]="['/lineup']"  >Lineup</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item" routerLinkActive="active" (click)="closeNavbarAfterSelection()">
           <a class="nav-link" [routerLink]="['/songs']"  >Browse Music</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item" routerLinkActive="active" (click)="closeNavbarAfterSelection()">
           <a class="nav-link" [routerLink]="['/saved-songs']"  >Saved Songs</a>
+        </li>
+        <li *ngIf="navbarOpen" class="nav-item" (click)="closeNavbarAfterSelection()">
+          <a class="nav-link" (click)="logout()">Logout</a>
         </li>
       </ul>
   
@@ -19,8 +31,6 @@
           Welcome {{authService.decodedToken?.unique_name | titlecase}}
         </a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
-          <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Edit</a>
-          <div class="dropdown-divider"></div>
           <a class="dropdown-item" (click)="logout()"><i class="fa fa-user"></i>Logout</a>
         </div>
       </div>

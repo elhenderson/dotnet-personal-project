@@ -9,44 +9,44 @@
       <div class="lineup-item">
         <h5 class="lineup-title">Prelude</h5>
         <!-- <input name="prelude" [(ngModel)]="lineup.prelude" placeholder={{lineup.prelude}}> -->
-        <div *ngFor="let song of lineup.prelude; let i = index" >
-          {{song}}<button type="button" (click)="removeSong(i, lineup.prelude, 'prelude')" class="btn btn-danger">Remove</button>
+        <div *ngFor="let song of lineup.prelude; let i = index" class="w-100 d-inline-flex justify-content-center align-middle mt-2">
+          {{song}}<button type="button" (click)="removeSong(i, lineup.prelude, 'prelude')" class="btn btn-danger ml-3">Remove</button>
         </div>
       </div>
       <div class="lineup-item">
         <h5 class="lineup-title">Family</h5>
-        <div *ngFor="let song of lineup.family; let i = index" >
-          {{song}}<button type="button" (click)="removeSong(i, lineup.family, 'family')" class="btn btn-danger">Remove</button>
+        <div *ngFor="let song of lineup.family; let i = index" class="w-100 d-inline-flex justify-content-center align-middle mt-2" >
+          {{song}}<button type="button" (click)="removeSong(i, lineup.family, 'family')" class="btn btn-danger ml-3">Remove</button>
         </div>
       </div>
       <div class="lineup-item">
         <h5 class="lineup-title">Bridal Party</h5>
-        <div *ngFor="let song of lineup.bridalParty; let i = index" >
-          {{song}}<button type="button" (click)="removeSong(i, lineup.bridalParty, 'bridalParty')" class="btn btn-danger">Remove</button>
+        <div *ngFor="let song of lineup.bridalParty; let i = index" class="w-100 d-inline-flex justify-content-center align-middle mt-2">
+          {{song}}<button type="button" (click)="removeSong(i, lineup.bridalParty, 'bridalParty')" class="btn btn-danger ml-3">Remove</button>
         </div>
       </div>
       <div class="lineup-item">
         <h5 class="lineup-title">Processional</h5>
-        <div *ngFor="let song of lineup.processional; let i = index" >
-          {{song}}<button type="button" (click)="removeSong(i, lineup.processional, 'processional')" class="btn btn-danger">Remove</button>
+        <div *ngFor="let song of lineup.processional; let i = index" class="w-100 d-inline-flex justify-content-center align-middle mt-2">
+          {{song}}<button type="button" (click)="removeSong(i, lineup.processional, 'processional')" class="btn btn-danger ml-3">Remove</button>
         </div>
       </div>
       <div class="lineup-item">
         <h5 class="lineup-title">Unity</h5>
-        <div *ngFor="let song of lineup.unity; let i = index" >
-          {{song}}<button type="button" (click)="removeSong(i, lineup.unity, 'unity')" class="btn btn-danger">Remove</button>
+        <div *ngFor="let song of lineup.unity; let i = index" class="w-100 d-inline-flex justify-content-center align-middle mt-2">
+          {{song}}<button type="button" (click)="removeSong(i, lineup.unity, 'unity')" class="btn btn-danger ml-3">Remove</button>
         </div>
       </div>
       <div class="lineup-item">
         <h5 class="lineup-title">Recessional</h5>
-        <div *ngFor="let song of lineup.recessional; let i = index" >
-          {{song}}<button type="button" (click)="removeSong(i, lineup.recessional, 'recessional')" class="btn btn-danger">Remove</button>
+        <div *ngFor="let song of lineup.recessional; let i = index" class="w-100 d-inline-flex justify-content-center align-middle mt-2">
+          {{song}}<button type="button" (click)="removeSong(i, lineup.recessional, 'recessional')" class="btn btn-danger ml-3">Remove</button>
         </div>
       </div>
       <div class="lineup-item">
         <h5 class="lineup-title">Postlude</h5>
-        <div *ngFor="let song of lineup.postlude; let i = index" >
-          {{song}}<button type="button" (click)="removeSong(i, lineup.postlude, 'postlude')" class="btn btn-danger">Remove</button>
+        <div *ngFor="let song of lineup.postlude; let i = index" class="w-100 d-inline-flex justify-content-center align-middle mt-2">
+          {{song}}<button type="button" (click)="removeSong(i, lineup.postlude, 'postlude')" class="btn btn-danger ml-3">Remove</button>
         </div>
       </div>
     </div>

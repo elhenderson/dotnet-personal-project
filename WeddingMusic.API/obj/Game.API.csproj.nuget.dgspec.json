@@ -68,6 +68,10 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "SpotifyAPI.Web": {
               "target": "Package",
               "version": "[4.2.0, )"
