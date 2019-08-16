@@ -109,7 +109,7 @@ namespace Game.API
             }
             
             // app.UseHttpsRedirection();
-            // seeder.SeedUsers();
+            seeder.SeedSongs();
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseAuthentication();
             app.UseDefaultFiles();
