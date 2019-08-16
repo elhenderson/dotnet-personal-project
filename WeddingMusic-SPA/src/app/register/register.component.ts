@@ -59,6 +59,7 @@ export class RegisterComponent implements OnInit {
   }
 
   createLineup() {
+    console.log('createLineup ran');
     setTimeout(function() {
       this.lineupService.createLineup(this.authService.decodedToken.nameid);
     }, 1000);

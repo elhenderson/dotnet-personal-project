@@ -16,6 +16,7 @@ export class LineupEditComponent implements OnInit {
   @ViewChild('editForm') editForm: NgForm;
   lineup: Lineup;
   updateSection: any;
+  sectionNames = ['prelude', 'family', 'bridalParty', 'processional', 'unity', 'recessional', 'postlude'];
   @HostListener('window:beforeunload', ['$event'])
   unloadNotification($event: any) {
     if (this.editForm.dirty) {
@@ -29,23 +30,32 @@ export class LineupEditComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.lineup = data['lineup'];
-      this.lineup.prelude = this.lineup.prelude.split('|').filter((el) => el.length !== 0);
-      this.lineup.family = this.lineup.family.split('|').filter((el) => el.length !== 0);
-      this.lineup.bridalParty = this.lineup.bridalParty.split('|').filter((el) => el.length !== 0);
-      this.lineup.processional = this.lineup.processional.split('|').filter((el) => el.length !== 0);
-      this.lineup.unity = this.lineup.unity.split('|').filter((el) => el.length !== 0);
-      this.lineup.recessional = this.lineup.recessional.split('|').filter((el) => el.length !== 0);
+      this.splitSongString();
     });
   }
 
+  splitSongString() {
+    console.log(this.sectionNames);
+    for (let i = 0; i < this.sectionNames.length; i++) {
+      if (this.lineup[this.sectionNames[i]] != null && this.lineup[this.sectionNames[i]] !== '') {
+        this.lineup[this.sectionNames[i]] = this.lineup[this.sectionNames[i]].split('|').filter((el) => el.length !== 0);
+      }
+    }
+  }
+
   updateLineup(sectionNames) {
-    for (let i = 0; i < sectionNames.length; i++) {
-      if (this.lineup[sectionNames[i]].length) {
-        const joinedSongArray = this.lineup[sectionNames[i]].join('|');
-        this.lineup[sectionNames[i]] = joinedSongArray;
+    for (let i = 0; i < this.sectionNames.length; i++) {
+      console.log('This ran ' + [i])
+      if (this.lineup[this.sectionNames[i]] != null && this.lineup[this.sectionNames[i]].length) {
+        const joinedSongArray = this.lineup[this.sectionNames[i]].join('|');
+        this.lineup[this.sectionNames[i]] = joinedSongArray;
+      } else if (this.lineup[this.sectionNames[i]] == null) {
+        this.lineup[this.sectionNames[i]] = '';
+        const joinedNoSongArray = this.lineup[this.sectionNames[i]].toString();
+        this.lineup[this.sectionNames[i]] = joinedNoSongArray;
       } else {
-        const joinedNoSongArray = this.lineup[sectionNames[i]].toString();
-        this.lineup[sectionNames[i]] = joinedNoSongArray;
+        const joinedNoSongArray = this.lineup[this.sectionNames[i]].toString();
+        this.lineup[this.sectionNames[i]] = joinedNoSongArray;
       }
     }
     this.lineupService.updateLineup(this.authService.decodedToken.nameid, this.lineup).subscribe(next => {

@@ -74,11 +74,13 @@ export class SongCardComponent implements OnInit {
   openModal(template: TemplateRef<any>) {
     this.addSongForm = this.formBuilder.group({section: [''], song: `|${this.song.title} by ${this.song.artist}`});
     this.modalRef = this.modalService.show(template);
-    
   }
 
   updateLineup() {
-    console.log(this.lineup);
+    console.log(this.lineup[this.addSongForm.value.section]);
+    if (this.lineup[this.addSongForm.value.section] == null) {
+      this.lineup[this.addSongForm.value.section] = '';
+    }
     this.lineup[this.addSongForm.value.section] += this.addSongForm.value.song;
     this.lineupService.updateLineup(this.authService.decodedToken.nameid, this.lineup).subscribe(next => {
       this.alertify.success('Lineup successfully updated!');
