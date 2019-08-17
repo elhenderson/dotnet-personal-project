@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  apiUrl: 'wa.database.windows.net/api'
+  apiUrl: 'http://localhost:5001/api/'
 };
 
 /*

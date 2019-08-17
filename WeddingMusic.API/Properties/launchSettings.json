@@ -24,7 +24,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
       },
-      "applicationUrl": "wa.database.windows.net"
+      "applicationUrl": "http://localhost:5001"
     }
   }
 }

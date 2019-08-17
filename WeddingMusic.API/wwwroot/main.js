@@ -2045,7 +2045,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: true,
-    apiUrl: 'wa.database.windows.net/api'
+    apiUrl: 'http://localhost:5001/api/'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
