@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:5001/api/'
+  production: true,
+  apiUrl: 'wa.database.windows.net/api'
 };
 
 /*
