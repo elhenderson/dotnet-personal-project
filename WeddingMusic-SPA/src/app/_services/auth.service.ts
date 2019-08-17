@@ -10,7 +10,7 @@ import { LineupService } from './lineup.service';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = environment.apiUrl +  '/auth/';
+  baseUrl = environment.apiUrl +  'auth/';
   jwtHelper = new JwtHelperService();
   decodedToken: any;
 

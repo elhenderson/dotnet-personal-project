@@ -415,7 +415,7 @@ var AuthService = /** @class */ (function () {
     function AuthService(http, lineupService) {
         this.http = http;
         this.lineupService = lineupService;
-        this.baseUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].apiUrl + '/auth/';
+        this.baseUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].apiUrl + 'auth/';
         this.jwtHelper = new _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_3__["JwtHelperService"]();
     }
     AuthService.prototype.login = function (model) {
@@ -2045,7 +2045,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: true,
-    apiUrl: 'http://localhost:5001/api/'
+    apiUrl: 'https://wa-app.azurewebsites.net/wa.database.windows.net/api/'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
