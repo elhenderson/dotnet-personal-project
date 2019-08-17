@@ -40,20 +40,6 @@
 /Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.RazorTargetAssemblyInfo.cache
 /Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.dll
 /Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.pdb
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/bin/Debug/netcoreapp2.2/Game.API.deps.json
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/bin/Debug/netcoreapp2.2/Game.API.runtimeconfig.json
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/bin/Debug/netcoreapp2.2/Game.API.runtimeconfig.dev.json
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/bin/Debug/netcoreapp2.2/Game.API.dll
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/bin/Debug/netcoreapp2.2/Game.API.pdb
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.csprojAssemblyReference.cache
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.csproj.CoreCompileInputs.cache
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.RazorAssemblyInfo.cache
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.RazorAssemblyInfo.cs
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.AssemblyInfoInputs.cache
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.AssemblyInfo.cs
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.RazorTargetAssemblyInfo.cache
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.dll
-E:/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.pdb
 C:/Users/Evann/Documents/GitHub/dotnet-personal-project/WeddingMusic.API/bin/Debug/netcoreapp2.2/Game.API.deps.json
 C:/Users/Evann/Documents/GitHub/dotnet-personal-project/WeddingMusic.API/bin/Debug/netcoreapp2.2/Game.API.runtimeconfig.json
 C:/Users/Evann/Documents/GitHub/dotnet-personal-project/WeddingMusic.API/bin/Debug/netcoreapp2.2/Game.API.runtimeconfig.dev.json
@@ -68,3 +54,17 @@ C:/Users/Evann/Documents/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Deb
 C:/Users/Evann/Documents/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.RazorTargetAssemblyInfo.cache
 C:/Users/Evann/Documents/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.dll
 C:/Users/Evann/Documents/GitHub/dotnet-personal-project/WeddingMusic.API/obj/Debug/netcoreapp2.2/Game.API.pdb
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.deps.json
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.runtimeconfig.json
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.runtimeconfig.dev.json
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.dll
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\bin\Debug\netcoreapp2.2\Game.API.pdb
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.csprojAssemblyReference.cache
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.csproj.CoreCompileInputs.cache
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.RazorAssemblyInfo.cache
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.RazorAssemblyInfo.cs
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.AssemblyInfoInputs.cache
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.AssemblyInfo.cs
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.RazorTargetAssemblyInfo.cache
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.dll
+E:\GitHub\dotnet-personal-project\WeddingMusic.API\obj\Debug\netcoreapp2.2\Game.API.pdb
