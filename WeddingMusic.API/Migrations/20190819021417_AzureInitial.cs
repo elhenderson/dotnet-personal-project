@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Game.API.Migrations
 {
-    public partial class InitialAzure : Migration
+    public partial class AzureInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

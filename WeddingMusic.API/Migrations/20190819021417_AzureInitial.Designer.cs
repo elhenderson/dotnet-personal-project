@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190819015602_InitialAzure")]
-    partial class InitialAzure
+    [Migration("20190819021417_AzureInitial")]
+    partial class AzureInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
