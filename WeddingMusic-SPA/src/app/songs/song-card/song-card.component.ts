@@ -64,6 +64,8 @@ export class SongCardComponent implements OnInit {
           } else {
             this.alertify.error('Sorry, there is no sample for this selection');
           }
+        }, error => {
+          this.alertify.error('Sorry, there is no sample for this selection');
         });
       } else {
         this.alertify.error('Sorry, there is no sample for this selection');

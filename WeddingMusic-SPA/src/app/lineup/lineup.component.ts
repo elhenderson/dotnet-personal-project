@@ -19,13 +19,6 @@ export class LineupComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.lineup = data['lineup'];
-      console.log(this.lineup);
-      if (this.lineup == null) {
-        console.log('this is null');
-        return this.lineupService.createLineup(this.authService.decodedToken.nameid).subscribe(next => {
-          window.location.reload();
-        });
-      }
       this.splitSongString();
 
       // this.lineup.prelude = this.lineup.prelude.split('|').filter((el) => el.length !== 0);

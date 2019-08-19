@@ -52,17 +52,12 @@ export class RegisterComponent implements OnInit {
         this.alertify.error(error);
       }, () => {
         this.authService.login(this.user).subscribe(() => {
-          this.router.navigate(['/songs']);
+          this.lineupService.createLineup(this.authService.decodedToken.nameid).subscribe(() => {
+            this.router.navigate(['/songs']);
+          });
         });
       });
     }
-  }
-
-  createLineup() {
-    console.log('createLineup ran');
-    setTimeout(function() {
-      this.lineupService.createLineup(this.authService.decodedToken.nameid);
-    }, 1000);
   }
 
   cancel() {
