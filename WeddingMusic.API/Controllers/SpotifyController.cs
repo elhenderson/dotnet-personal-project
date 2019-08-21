@@ -8,6 +8,8 @@ using SpotifyAPI.Web;
 using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web.Enums;
 using SpotifyAPI.Web.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 
 namespace WeddingMusic.API.Controllers
 {
@@ -25,7 +27,7 @@ namespace WeddingMusic.API.Controllers
             // DotNetEnv.Env.Load("../.env");
             var builder = new ConfigurationBuilder();
             builder.AddAzureAppConfiguration(Environment.GetEnvironmentVariable("EnvironmentVariables"));
-            var config  builder.build();
+            var config = builder.Build();
             var spotifyId = config["SPOTIFY_ID"];
             var spotifySecret = config["SPOTIFY_SECRET"];
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
@@ -50,7 +52,7 @@ namespace WeddingMusic.API.Controllers
             // DotNetEnv.Env.Load("../.env");
             var builder = new ConfigurationBuilder();
             builder.AddAzureAppConfiguration(Environment.GetEnvironmentVariable("EnvironmentVariables"));
-            var config  builder.build();
+            var config = builder.Build();
             var spotifyId = config["SPOTIFY_ID"];
             var spotifySecret = config["SPOTIFY_SECRET"];
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
