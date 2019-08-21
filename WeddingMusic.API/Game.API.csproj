@@ -18,5 +18,6 @@
     <PackageReference Include="SpotifyAPI.Web" Version="4.2.0"/>
     <PackageReference Include="SpotifyAPI.Web.Auth" Version="4.2.0"/>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0"/>
+    <PackageReference Include="DotNetEnv" Version="1.2.0"/>
   </ItemGroup>
 </Project>

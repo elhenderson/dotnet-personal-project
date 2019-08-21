@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\Game.API.csproj": {}
+    "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/Game.API.csproj": {}
   },
   "projects": {
-    "E:\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\Game.API.csproj": {
+    "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/Game.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\Game.API.csproj",
+        "projectUniqueName": "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/Game.API.csproj",
         "projectName": "Game.API",
-        "projectPath": "E:\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\Game.API.csproj",
-        "packagesPath": "C:\\Users\\evann\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub\\dotnet-personal-project\\WeddingMusic.API\\obj\\",
+        "projectPath": "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/Game.API.csproj",
+        "packagesPath": "/Users/evann/.nuget/packages/",
+        "outputPath": "/Users/evann/Documents/GitHub2/dotnet personal project/WeddingMusic.API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\evann\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/evann/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +42,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[4.0.1, )"
+            },
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             },
             "Microsoft.AspNetCore": {
               "target": "Package",
