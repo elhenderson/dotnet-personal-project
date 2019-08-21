@@ -22,7 +22,7 @@ namespace WeddingMusic.API.Controllers
         [HttpGet("{title}")]
         public async Task<IActionResult> GetSpotify(string title)
         {
-            DotNetEnv.Env.Load("../.env");
+            // DotNetEnv.Env.Load("../.env");
             var spotifyId = System.Environment.GetEnvironmentVariable("SPOTIFY_ID");
             var spotifySecret = System.Environment.GetEnvironmentVariable("SPOTIFY_SECRET");
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
@@ -44,7 +44,7 @@ namespace WeddingMusic.API.Controllers
         [HttpGet("alt/{title}")]
                public async Task<IActionResult> GetSpotifyAlt(string title, string artist)
         {
-            DotNetEnv.Env.Load("../.env");
+            // DotNetEnv.Env.Load("../.env");
             var spotifyId = System.Environment.GetEnvironmentVariable("SPOTIFY_ID");
             var spotifySecret = System.Environment.GetEnvironmentVariable("SPOTIFY_SECRET");
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
