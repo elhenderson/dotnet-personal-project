@@ -8,8 +8,6 @@ using SpotifyAPI.Web;
 using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web.Enums;
 using SpotifyAPI.Web.Models;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 
 namespace WeddingMusic.API.Controllers
 {
@@ -24,12 +22,9 @@ namespace WeddingMusic.API.Controllers
         [HttpGet("{title}")]
         public async Task<IActionResult> GetSpotify(string title)
         {
-            // DotNetEnv.Env.Load("../.env");
-            var builder = new ConfigurationBuilder();
-            builder.AddAzureAppConfiguration(Environment.GetEnvironmentVariable("EnvironmentVariables"));
-            var config = builder.Build();
-            var spotifyId = config["SPOTIFY_ID"];
-            var spotifySecret = config["SPOTIFY_SECRET"];
+            DotNetEnv.Env.Load();
+            var spotifyId = System.Environment.GetEnvironmentVariable("SPOTIFY_ID");
+            var spotifySecret = System.Environment.GetEnvironmentVariable("SPOTIFY_SECRET");
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() 
@@ -49,12 +44,9 @@ namespace WeddingMusic.API.Controllers
         [HttpGet("alt/{title}")]
                public async Task<IActionResult> GetSpotifyAlt(string title, string artist)
         {
-            // DotNetEnv.Env.Load("../.env");
-            var builder = new ConfigurationBuilder();
-            builder.AddAzureAppConfiguration(Environment.GetEnvironmentVariable("EnvironmentVariables"));
-            var config = builder.Build();
-            var spotifyId = config["SPOTIFY_ID"];
-            var spotifySecret = config["SPOTIFY_SECRET"];
+            DotNetEnv.Env.Load();
+            var spotifyId = System.Environment.GetEnvironmentVariable("SPOTIFY_ID");
+            var spotifySecret = System.Environment.GetEnvironmentVariable("SPOTIFY_SECRET");
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() 
