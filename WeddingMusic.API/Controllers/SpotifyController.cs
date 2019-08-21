@@ -26,8 +26,8 @@ namespace WeddingMusic.API.Controllers
             var builder = new ConfigurationBuilder();
             builder.AddAzureAppConfiguration(Environment.GetEnvironmentVariable("EnvironmentVariables"));
             var config  builder.build();
-            var spotifyId = config["SPOTIFY_ID"]
-            var spotifySecret = config["SPOTIFY_SECRET"]
+            var spotifyId = config["SPOTIFY_ID"];
+            var spotifySecret = config["SPOTIFY_SECRET"];
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() 
@@ -51,8 +51,8 @@ namespace WeddingMusic.API.Controllers
             var builder = new ConfigurationBuilder();
             builder.AddAzureAppConfiguration(Environment.GetEnvironmentVariable("EnvironmentVariables"));
             var config  builder.build();
-            var spotifyId = config["SPOTIFY_ID"]
-            var spotifySecret = config["SPOTIFY_SECRET"]
+            var spotifyId = config["SPOTIFY_ID"];
+            var spotifySecret = config["SPOTIFY_SECRET"];
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() 
