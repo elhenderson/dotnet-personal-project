@@ -23,8 +23,11 @@ namespace WeddingMusic.API.Controllers
         public async Task<IActionResult> GetSpotify(string title)
         {
             // DotNetEnv.Env.Load("../.env");
-            var spotifyId = System.Environment.GetEnvironmentVariable("SPOTIFY_ID");
-            var spotifySecret = System.Environment.GetEnvironmentVariable("SPOTIFY_SECRET");
+            var builder = new ConfigurationBuilder();
+            builder.AddAzureAppConfiguration(Environment.GetEnvironmentVariable("EnvironmentVariables"));
+            var config  builder.build();
+            var spotifyId = config["SPOTIFY_ID"]
+            var spotifySecret = config["SPOTIFY_SECRET"]
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() 
@@ -45,8 +48,11 @@ namespace WeddingMusic.API.Controllers
                public async Task<IActionResult> GetSpotifyAlt(string title, string artist)
         {
             // DotNetEnv.Env.Load("../.env");
-            var spotifyId = System.Environment.GetEnvironmentVariable("SPOTIFY_ID");
-            var spotifySecret = System.Environment.GetEnvironmentVariable("SPOTIFY_SECRET");
+            var builder = new ConfigurationBuilder();
+            builder.AddAzureAppConfiguration(Environment.GetEnvironmentVariable("EnvironmentVariables"));
+            var config  builder.build();
+            var spotifyId = config["SPOTIFY_ID"]
+            var spotifySecret = config["SPOTIFY_SECRET"]
             CredentialsAuth auth = new CredentialsAuth(spotifyId, spotifySecret);
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() 
