@@ -20,5 +20,6 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0"/>
     <PackageReference Include="DotNetEnv" Version="1.2.0"/>
     <PackageReference Include="Microsoft.Azure.AppConfiguration.AspNetCore" Version="2.0.0-preview-009200001-7"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="2.2.0"/>
   </ItemGroup>
 </Project>

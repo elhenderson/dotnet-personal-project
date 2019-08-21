@@ -8,6 +8,8 @@ using SpotifyAPI.Web;
 using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web.Enums;
 using SpotifyAPI.Web.Models;
+using Microsoft.Azure.KeyVault;
+using Microsoft.Azure.Services.AppAuthentication;
 
 namespace WeddingMusic.API.Controllers
 {
@@ -22,7 +24,13 @@ namespace WeddingMusic.API.Controllers
         [HttpGet("{title}")]
         public async Task<IActionResult> GetSpotify(string title)
         {
-            CredentialsAuth auth = new CredentialsAuth("ddc065a237b2431696635124e5785d8d", "23436e2031b04f5783a7865b99489a04");
+            AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();  
+            var keyVaultClient = new KeyVaultClient(
+                new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback)
+            );
+            var spotifyID = await keyVaultClient.GetSecretAsync("https://wakeyvault.vault.azure.net/secrets/appSettings--connectionSettings--spotifyId/69cdf003254f4b2e81a5ce90dffe80ab");
+            var spotifySecret = await keyVaultClient.GetSecretAsync("https://wakeyvault.vault.azure.net/secrets/appSettings--connectionStrings--spotifySecret/49de24c1d0a44edcb4c7e9379b49d1a4");
+            CredentialsAuth auth = new CredentialsAuth(spotifyID.Value, spotifySecret.Value);
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() 
             {
@@ -41,7 +49,13 @@ namespace WeddingMusic.API.Controllers
         [HttpGet("alt/{title}")]
                public async Task<IActionResult> GetSpotifyAlt(string title, string artist)
         {
-            CredentialsAuth auth = new CredentialsAuth("ddc065a237b2431696635124e5785d8d", "23436e2031b04f5783a7865b99489a04");
+            AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();  
+            var keyVaultClient = new KeyVaultClient(
+                new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback)
+            );
+            var spotifyID = await keyVaultClient.GetSecretAsync("https://wakeyvault.vault.azure.net/secrets/appSettings--connectionSettings--spotifyId/69cdf003254f4b2e81a5ce90dffe80ab");
+            var spotifySecret = await keyVaultClient.GetSecretAsync("https://wakeyvault.vault.azure.net/secrets/appSettings--connectionStrings--spotifySecret/49de24c1d0a44edcb4c7e9379b49d1a4");
+            CredentialsAuth auth = new CredentialsAuth(spotifyID.Value, spotifySecret.Value);
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() 
             {
