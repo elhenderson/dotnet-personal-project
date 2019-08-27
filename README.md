@@ -1,5 +1,6 @@
 # Wedding Music App
 ## Preview, plan, and save your favorite selections for your wedding ceremony.
+## Live Demo: http://wa-app.azurewebsites.net/
 
 Built with Angular and .NET Core
 
